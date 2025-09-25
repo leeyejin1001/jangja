@@ -1,0 +1,588 @@
+/* ========== 학교생활 페이지 전용 다크 스타일 ========== */
+
+/* 갤러리 탭 스타일 */
+.gallery-tabs {
+    margin-bottom: 3em;
+}
+
+.gallery-content {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.gallery-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.tab-btn {
+    transition: all 0.3s ease !important;
+    border: 2px solid var(--primary-red) !important;
+    background: transparent !important;
+    color: var(--primary-red) !important;
+}
+
+.tab-btn.active {
+    background: var(--gradient-primary) !important;
+    color: white !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(220, 38, 38, 0.4) !important;
+    border: none !important;
+}
+
+.tab-btn:hover {
+    background: var(--gradient-accent) !important;
+    color: white !important;
+    border: none !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(220, 38, 38, 0.3) !important;
+}
+
+/* ========== 갤러리 이미지 스타일 ========== */
+.gallery .image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 2em;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color) !important;
+}
+
+.gallery .image:hover {
+    box-shadow: 0 15px 40px rgba(220, 38, 38, 0.3) !important;
+    transform: translateY(-5px);
+    border-color: rgba(220, 38, 38, 0.5) !important;
+}
+
+.gallery .image img {
+    transition: transform 0.4s ease;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.gallery .image:hover img {
+    transform: scale(1.08);
+}
+
+/* ========== 이미지 오버레이 ========== */
+.gallery .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--gradient-primary) !important;
+    color: white;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1.5em;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+    opacity: 0.95;
+}
+
+.gallery .overlay h4 {
+    margin: 0 0 0.8em 0;
+    color: white !important;
+    font-size: 1.2em;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.gallery .overlay p {
+    margin: 0;
+    font-size: 0.95em;
+    color: rgba(255, 255, 255, 0.95) !important;
+    line-height: 1.4;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+/* ========== 업로드 섹션 ========== */
+.upload-section {
+    margin-top: 4em;
+    padding: 3em;
+    background: var(--dark-card) !important;
+    border-radius: 16px;
+    border: 1px solid var(--border-color) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2) !important;
+}
+
+.upload-section header h4 {
+    color: var(--text-primary) !important;
+    margin-bottom: 0.5em;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.upload-section header p {
+    color: var(--text-secondary) !important;
+    margin-bottom: 2em;
+}
+
+.upload-section form {
+    margin-top: 2em;
+}
+
+.upload-section input[type="text"],
+.upload-section input[type="file"],
+.upload-section select,
+.upload-section textarea {
+    border: 2px solid var(--border-color) !important;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background: var(--dark-bg) !important;
+    color: var(--text-primary) !important;
+}
+
+.upload-section input[type="text"]:focus,
+.upload-section input[type="file"]:focus,
+.upload-section select:focus,
+.upload-section textarea:focus {
+    border-color: var(--primary-red) !important;
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1) !important;
+    outline: none;
+    background: var(--dark-surface) !important;
+}
+
+.upload-section .button.primary {
+    background: var(--gradient-primary) !important;
+    border: none !important;
+    padding: 1em 2.5em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    color: white !important;
+}
+
+.upload-section .button.primary:hover {
+    background: var(--gradient-accent) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(220, 38, 38, 0.4) !important;
+    color: white !important;
+}
+
+/* ========== 스케줄 카드 스타일 ========== */
+.schedule-card {
+    background: var(--dark-card) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 16px;
+    padding: 2.5rem;
+    transition: all 0.3s ease;
+    height: 100%;
+    text-align: center;
+}
+
+.schedule-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(30, 64, 175, 0.3) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2) !important;
+}
+
+.schedule-icon {
+    width: 80px;
+    height: 80px;
+    background: rgba(30, 64, 175, 0.1) !important;
+    color: var(--primary-blue) !important;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 2rem;
+}
+
+.schedule-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary) !important;
+}
+
+.schedule-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.schedule-list li {
+    color: var(--text-secondary) !important;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--border-color) !important;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.schedule-list li:before {
+    content: '▶';
+    position: absolute;
+    left: 0;
+    top: 0.8rem;
+    color: var(--primary-blue) !important;
+    font-size: 0.8rem;
+}
+
+.schedule-list li:hover {
+    background: rgba(30, 64, 175, 0.05) !important;
+    padding-left: 2rem;
+}
+
+.schedule-list li:last-child {
+    border-bottom: none;
+}
+
+.schedule-list li strong {
+    color: var(--text-primary) !important;
+    font-weight: 600;
+}
+
+/* ========== 학사일정 테이블 스타일 ========== */
+.table-wrapper {
+    margin: 3em 0;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2) !important;
+}
+
+table.alt {
+    background: var(--dark-surface) !important;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--border-color) !important;
+}
+
+table.alt thead {
+    background: var(--gradient-primary) !important;
+}
+
+table.alt thead th {
+    color: white !important;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 1.5em 1em;
+    border: none !important;
+}
+
+table.alt tbody tr {
+    transition: all 0.3s ease;
+    border-bottom: 1px solid var(--border-color) !important;
+}
+
+table.alt tbody tr:nth-child(odd) {
+    background: rgba(220, 38, 38, 0.03) !important;
+}
+
+table.alt tbody tr:nth-child(even) {
+    background: rgba(30, 64, 175, 0.03) !important;
+}
+
+table.alt tbody tr:hover {
+    background: rgba(220, 38, 38, 0.08) !important;
+    transform: scale(1.01);
+}
+
+table.alt tbody td {
+    padding: 1.2em 1em;
+    vertical-align: middle;
+    color: var(--text-secondary) !important;
+}
+
+table.alt tbody td:first-child {
+    font-weight: 700;
+    color: var(--primary-red) !important;
+    font-size: 1.1em;
+}
+
+table.alt tbody td:nth-child(2) {
+    font-weight: 600;
+    color: var(--text-primary) !important;
+}
+
+table.alt tbody td:last-child {
+    color: var(--text-secondary) !important;
+    font-size: 0.95em;
+}
+
+/* ========== 반응형 디자인 ========== */
+@media screen and (max-width: 1280px) {
+    .gallery .image img {
+        height: 220px;
+    }
+    
+    .schedule-card {
+        padding: 2em 1.5em;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .gallery .image img {
+        height: 200px;
+    }
+    
+    .upload-section {
+        padding: 2.5em;
+    }
+    
+    .schedule-card {
+        margin-bottom: 2rem;
+    }
+    
+    .tab-btn {
+        font-size: 0.9em;
+        padding: 0.7em 1.5em;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .gallery .col-4 {
+        width: 100% !important;
+    }
+    
+    .gallery .image {
+        margin-bottom: 1.5em;
+    }
+    
+    .gallery .image img {
+        height: 250px;
+    }
+    
+    .upload-section {
+        padding: 2em 1.5em;
+        margin-top: 2em;
+    }
+    
+    .schedule-card {
+        padding: 2em 1em;
+        margin-bottom: 1em;
+    }
+    
+    .tab-btn {
+        font-size: 0.8em;
+        padding: 0.6em 1.2em;
+        margin-bottom: 0.5em;
+    }
+    
+    .gallery-tabs .actions.fit li {
+        width: 100%;
+        margin-bottom: 0.5em;
+    }
+    
+    .table-wrapper {
+        overflow-x: auto;
+    }
+    
+    table.alt {
+        min-width: 600px;
+    }
+    
+    table.alt thead th,
+    table.alt tbody td {
+        padding: 1em 0.8em;
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .gallery .image img {
+        height: 200px;
+    }
+    
+    .upload-section {
+        padding: 1.5em 1em;
+    }
+    
+    .schedule-card {
+        padding: 1.5em 0.8em;
+    }
+    
+    .gallery .overlay {
+        padding: 1em;
+    }
+    
+    .gallery .overlay h4 {
+        font-size: 1em;
+    }
+    
+    .gallery .overlay p {
+        font-size: 0.85em;
+    }
+    
+    table.alt thead th,
+    table.alt tbody td {
+        padding: 0.8em 0.5em;
+        font-size: 0.8em;
+    }
+}
+
+/* ========== 특별 효과 ========== */
+.gallery .image {
+    position: relative;
+}
+
+.gallery .image:hover .overlay {
+    display: flex !important;
+    animation: overlaySlideUp 0.4s ease-out;
+}
+
+@keyframes overlaySlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 업로드 폼 성공/에러 메시지 스타일 */
+.upload-message {
+    padding: 1em 1.5em;
+    border-radius: 8px;
+    margin-bottom: 1em;
+    text-align: center;
+    font-weight: 500;
+}
+
+.upload-message.success {
+    background: rgba(76, 175, 80, 0.1) !important;
+    color: #4CAF50 !important;
+    border: 1px solid rgba(76, 175, 80, 0.3) !important;
+}
+
+.upload-message.error {
+    background: rgba(244, 67, 54, 0.1) !important;
+    color: #F44336 !important;
+    border: 1px solid rgba(244, 67, 54, 0.3) !important;
+}
+
+/* 로딩 스피너 */
+.loading-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(220, 38, 38, 0.3) !important;
+    border-radius: 50%;
+    border-top-color: var(--primary-red) !important;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* 파일 미리보기 스타일 */
+.file-preview {
+    text-align: center;
+    padding: 1rem;
+    background: var(--dark-surface) !important;
+    border-radius: 8px;
+    margin-top: 1rem;
+    border: 1px solid var(--border-color) !important;
+}
+
+.file-preview img {
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+}
+
+.file-preview p {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary) !important;
+}
+
+/* 에러 상태 스타일 */
+.error {
+    border-color: #F44336 !important;
+    box-shadow: 0 0 0 2px rgba(244, 67, 54, 0.2) !important;
+}
+
+.error-message {
+    color: #F44336 !important;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    display: block;
+}
+
+/* 이미지 모달 스타일 */
+.image-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9) !important;
+    display: none;
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    background: var(--dark-surface) !important;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5) !important;
+}
+
+.modal-content img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: white !important;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1001;
+    background: rgba(0, 0, 0, 0.5) !important;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+    background: var(--primary-red) !important;
+    transform: scale(1.1);
+}
+
+.modal-info {
+    padding: 1.5rem;
+    color: var(--text-primary) !important;
+}
+
+.modal-info h4 {
+    color: var(--text-primary) !important;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.modal-info p {
+    color: var(--text-secondary) !important;
+    margin: 0;
+    line-height: 1.6;
+}

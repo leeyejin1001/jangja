@@ -1,0 +1,59 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# 미디어 파일 저장 위치
+media_folder: "assets/images/uploads"
+public_folder: "/assets/images/uploads"
+
+# 한국어 인터페이스 설정
+locale: ko
+
+# 사이트 URL (GitHub Pages 주소로 변경하세요)
+site_url: https://leeyejin1001.github.io/jangja
+
+# 컬렉션 설정
+collections:
+  - name: "gallery"
+    label: "갤러리 관리"
+    files:
+      - file: "_data/gallery.json"
+        label: "갤러리 사진들"
+        name: "gallery_data"
+        fields:
+          - label: "우리들의 모습"
+            name: "moments"
+            widget: "list"
+            summary: "{{fields.title}} - {{fields.date}}"
+            fields:
+              - {label: "제목", name: "title", widget: "string", required: true}
+              - {label: "설명", name: "description", widget: "text", required: false}
+              - {label: "사진", name: "image", widget: "image", required: true}
+              - {label: "날짜", name: "date", widget: "datetime", format: "YYYY-MM-DD", default: ""}
+          
+          - label: "우리들의 작품"
+            name: "works"
+            widget: "list"
+            summary: "{{fields.title}} - {{fields.date}}"
+            fields:
+              - {label: "제목", name: "title", widget: "string", required: true}
+              - {label: "설명", name: "description", widget: "text", required: false}
+              - {label: "사진", name: "image", widget: "image", required: true}
+              - {label: "날짜", name: "date", widget: "datetime", format: "YYYY-MM-DD", default: ""}
+
+  - name: "notices"
+    label: "공지사항 관리"
+    files:
+      - file: "_data/notices.json"
+        label: "공지사항"
+        name: "notices_data"
+        fields:
+          - label: "공지사항 목록"
+            name: "notices"
+            widget: "list"
+            summary: "{{fields.title}} - {{fields.priority}}"
+            fields:
+              - {label: "제목", name: "title", widget: "string", required: true}
+              - {label: "내용", name: "content", widget: "markdown", required: true}
+              - {label: "우선순위", name: "priority", widget: "select", options: ["일반", "중요", "긴급"], default: "일반"}
+              - {label: "게시일", name: "date", widget: "datetime", format: "YYYY-MM-DD", default: ""}

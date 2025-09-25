@@ -1,0 +1,127 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# 미디어 파일 저장 위치
+media_folder: "assets/images/uploads"
+public_folder: "/assets/images/uploads"
+
+# 한국어 인터페이스 설정
+locale: ko
+
+# 사이트 URL (실제 GitHub Pages 주소로 변경하세요)
+site_url: https://leeyejin1001.github.io/jangja
+
+# 로고 설정 (선택사항)
+logo_url: /assets/images/logo.png
+
+# 컬렉션 설정
+collections:
+  # 갤러리 관리
+  - name: "gallery"
+    label: "📸 갤러리 관리"
+    files:
+      - file: "_data/gallery.json"
+        label: "갤러리 사진들"
+        name: "gallery_data"
+        fields:
+          - label: "우리들의 모습"
+            name: "moments"
+            widget: "list"
+            summary: "{{fields.title}} - {{fields.date}}"
+            fields:
+              - {label: "제목", name: "title", widget: "string", required: true, hint: "사진의 제목을 입력하세요"}
+              - {label: "설명", name: "description", widget: "text", required: false, hint: "사진에 대한 간단한 설명"}
+              - {label: "사진", name: "image", widget: "image", required: true, hint: "업로드할 사진을 선택하세요"}
+              - {label: "날짜", name: "date", widget: "datetime", format: "YYYY-MM-DD", default: "", hint: "사진 촬영 날짜"}
+          
+          - label: "우리들의 작품"
+            name: "works"
+            widget: "list"
+            summary: "{{fields.title}} - {{fields.date}}"
+            fields:
+              - {label: "제목", name: "title", widget: "string", required: true, hint: "작품의 제목을 입력하세요"}
+              - {label: "설명", name: "description", widget: "text", required: false, hint: "작품에 대한 설명"}
+              - {label: "작품 사진", name: "image", widget: "image", required: true, hint: "작품 사진을 업로드하세요"}
+              - {label: "날짜", name: "date", widget: "datetime", format: "YYYY-MM-DD", default: "", hint: "작품 완성 날짜"}
+
+  # 공지사항 관리
+  - name: "notices"
+    label: "📢 공지사항 관리"
+    files:
+      - file: "_data/notices.json"
+        label: "공지사항 목록"
+        name: "notices_data"
+        fields:
+          - label: "공지사항"
+            name: "notices"
+            widget: "list"
+            summary: "{{fields.title}} - {{fields.priority}}"
+            fields:
+              - {label: "제목", name: "title", widget: "string", required: true, hint: "공지사항 제목을 입력하세요"}
+              - {label: "내용", name: "content", widget: "markdown", required: true, hint: "공지사항 내용을 작성하세요 (마크다운 지원)"}
+              - {label: "우선순위", name: "priority", widget: "select", options: ["일반", "중요", "긴급"], default: "일반", hint: "공지사항의 중요도를 선택하세요"}
+              - {label: "게시일", name: "date", widget: "datetime", format: "YYYY-MM-DD", default: "", hint: "공지사항 게시 날짜"}
+
+  # 학교 소식 (추가)
+  - name: "news"
+    label: "📰 학교 소식"
+    files:
+      - file: "_data/news.json"
+        label: "학교 소식"
+        name: "news_data"
+        fields:
+          - label: "소식 목록"
+            name: "news"
+            widget: "list"
+            summary: "{{fields.title}} - {{fields.date}}"
+            fields:
+              - {label: "제목", name: "title", widget: "string", required: true}
+              - {label: "내용", name: "content", widget: "markdown", required: true}
+              - {label: "대표 이미지", name: "image", widget: "image", required: false}
+              - {label: "카테고리", name: "category", widget: "select", options: ["학사", "행사", "수상", "기타"], default: "기타"}
+              - {label: "게시일", name: "date", widget: "datetime", format: "YYYY-MM-DD", default: ""}
+
+  # 학사일정 (추가)
+  - name: "schedule"
+    label: "📅 학사일정"
+    files:
+      - file: "_data/schedule.json"
+        label: "학사일정"
+        name: "schedule_data"
+        fields:
+          - label: "일정 목록"
+            name: "events"
+            widget: "list"
+            summary: "{{fields.title}} - {{fields.date}}"
+            fields:
+              - {label: "일정명", name: "title", widget: "string", required: true}
+              - {label: "상세 설명", name: "description", widget: "text", required: false}
+              - {label: "시작 날짜", name: "date", widget: "datetime", format: "YYYY-MM-DD", required: true}
+              - {label: "종료 날짜", name: "end_date", widget: "datetime", format: "YYYY-MM-DD", required: false}
+              - {label: "장소", name: "location", widget: "string", required: false}
+              - {label: "카테고리", name: "category", widget: "select", options: ["수업", "행사", "시험", "방학", "기타"], default: "기타"}
+              - {label: "중요도", name: "priority", widget: "select", options: ["일반", "중요"], default: "일반"}
+
+# 에디터 설정
+editor:
+  preview: true
+
+# 검색 설정
+search: true
+
+# 슬러그 설정
+slug:
+  encoding: "ascii"
+  clean_accents: true
+
+# 백업 및 버전 관리 설정
+publish_mode: editorial_workflow
+
+# 표시 URL 설정
+display_url: https://leeyejin1001.github.io/jangja
+
+# 파일 템플릿 설정
+slug:
+  clean_accents: true
+  sanitize_replacement: "_"

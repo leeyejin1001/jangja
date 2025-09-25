@@ -1,0 +1,747 @@
+/* ========== 중고등교육과정 페이지 - Juilliard 다크 테마 스타일 ========== */
+
+/* 기본 변수 설정 */
+:root {
+    /* 기존 jangja-custom.css 변수들 사용 */
+    --curriculum-primary: var(--primary-red);
+    --curriculum-secondary: var(--primary-blue);
+    --curriculum-gradient: var(--gradient-primary);
+    --curriculum-dark: var(--dark-card);
+    --curriculum-surface: var(--dark-surface);
+    --curriculum-text: var(--text-primary);
+    --curriculum-text-muted: var(--text-secondary);
+    --curriculum-border: var(--border-color);
+}
+
+/* ========== 네비게이션 스타일 ========== */
+.curriculum-nav {
+    margin-bottom: 2em;
+    position: relative;
+}
+
+.curriculum-nav .actions.fit {
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.curriculum-nav .actions.fit li {
+    margin-bottom: 0.5em;
+    flex: 1;
+    min-width: 200px;
+}
+
+.curriculum-nav .button {
+    background: var(--curriculum-dark) !important;
+    border: 2px solid var(--curriculum-border) !important;
+    color: var(--curriculum-text-muted) !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    font-weight: 600 !important;
+    position: relative !important;
+    overflow: hidden !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    padding: 1em 2em !important;
+    border-radius: 12px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    line-height: 1.2 !important;
+    height: auto !important;
+    min-height: 3.5em !important;
+}
+
+.curriculum-nav .button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--curriculum-gradient);
+    transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+}
+
+.curriculum-nav .button:hover,
+.curriculum-nav .button.active {
+    background: var(--curriculum-gradient) !important;
+    color: white !important;
+    border-color: transparent !important;
+    transform: translateY(-4px) !important;
+    box-shadow: 0 12px 35px rgba(220, 38, 38, 0.4) !important;
+}
+
+.curriculum-nav .button:hover:before,
+.curriculum-nav .button.active:before {
+    left: 0;
+}
+
+/* ========== 교육 개요 섹션 ========== */
+.education-overview {
+    margin-top: 3em;
+}
+
+.education-description {
+    padding: 2em;
+    background: var(--curriculum-dark);
+    border-radius: 16px;
+    border: 1px solid var(--curriculum-border);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.education-description h3 {
+    color: var(--curriculum-primary) !important;
+    font-size: 1.8em;
+    margin-bottom: 1em;
+    font-weight: 700;
+}
+
+.education-description p {
+    color: var(--curriculum-text-muted) !important;
+    line-height: 1.7;
+    margin-bottom: 2em;
+    font-size: 1.1em;
+}
+
+.education-goals {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.education-goals li {
+    color: var(--curriculum-text) !important;
+    padding: 0.8em 0;
+    border-bottom: 1px solid var(--curriculum-border);
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.education-goals li:last-child {
+    border-bottom: none;
+}
+
+.education-goals li:hover {
+    color: var(--curriculum-primary) !important;
+    transform: translateX(10px);
+}
+
+.education-goals li .icon {
+    color: var(--curriculum-primary) !important;
+    margin-right: 1em;
+    font-size: 1.1em;
+}
+
+/* ========== 특색교육 프로그램 카드 ========== */
+.special-program {
+    margin-bottom: 4em;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.special-program.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.program-card {
+    background: var(--curriculum-dark);
+    border: 1px solid var(--curriculum-border);
+    border-radius: 20px;
+    padding: 3em;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 2.5em;
+    align-items: center;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.program-card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(220, 38, 38, 0.1), transparent);
+    transition: left 0.6s ease;
+    z-index: 1;
+}
+
+.program-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(220, 38, 38, 0.3);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.program-card:hover:before {
+    left: 100%;
+}
+
+.program-card.reverse {
+    grid-template-columns: auto 1fr auto;
+}
+
+.program-card.reverse .program-image {
+    order: -1;
+}
+
+.program-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--curriculum-gradient);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    color: white;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 2;
+    transition: all 0.4s ease;
+}
+
+.program-card:hover .program-icon {
+    transform: rotate(360deg) scale(1.1);
+}
+
+.program-content {
+    position: relative;
+    z-index: 2;
+}
+
+.program-content h3 {
+    color: var(--curriculum-text) !important;
+    font-size: 1.6em;
+    margin-bottom: 1em;
+    font-weight: 700;
+}
+
+.program-content p {
+    color: var(--curriculum-text-muted) !important;
+    line-height: 1.7;
+    margin-bottom: 1.5em;
+    font-size: 1.05em;
+}
+
+.program-details {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.program-details li {
+    color: var(--curriculum-text) !important;
+    padding: 0.6em 0;
+    border-bottom: 1px solid var(--curriculum-border);
+    position: relative;
+    padding-left: 2em;
+    transition: all 0.3s ease;
+}
+
+.program-details li:before {
+    content: '▶';
+    color: var(--curriculum-primary);
+    position: absolute;
+    left: 0;
+    font-size: 0.8em;
+    transition: all 0.3s ease;
+}
+
+.program-details li:hover {
+    color: var(--curriculum-primary) !important;
+    padding-left: 2.5em;
+}
+
+.program-details li:hover:before {
+    transform: translateX(5px);
+}
+
+.program-details li:last-child {
+    border-bottom: none;
+}
+
+.program-image {
+    width: 300px;
+    height: 200px;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+}
+
+/* ========== 슬라이드 애니메이션 ========== */
+.slide-container {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.slide-content {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform, opacity;
+}
+
+.slide-content.slide-right {
+    transform: translateX(100px);
+}
+
+.slide-content.slide-up {
+    transform: translateY(50px);
+}
+
+.slide-content.slide-in {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.slide-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+    border-radius: 12px;
+}
+
+.slide-content:hover img {
+    transform: scale(1.05);
+}
+
+/* ========== 교과교육 그리드 ========== */
+.subject-grid {
+    margin-top: 3em;
+}
+
+.subject-card {
+    background: var(--curriculum-dark);
+    border: 1px solid var(--curriculum-border);
+    border-radius: 20px;
+    padding: 2.5em;
+    text-align: center;
+    height: 100%;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.subject-card:before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(from 0deg, transparent, rgba(220, 38, 38, 0.1), transparent);
+    animation: rotate 6s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.subject-card:hover:before {
+    opacity: 1;
+}
+
+.subject-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(220, 38, 38, 0.4);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+}
+
+.subject-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--curriculum-gradient);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5em;
+    font-size: 1.8em;
+    color: white;
+    position: relative;
+    z-index: 2;
+    transition: all 0.4s ease;
+}
+
+.subject-card:hover .subject-icon {
+    transform: scale(1.1) rotateY(180deg);
+}
+
+.subject-card h3 {
+    color: var(--curriculum-text) !important;
+    font-size: 1.3em;
+    margin-bottom: 1em;
+    font-weight: 700;
+    position: relative;
+    z-index: 2;
+}
+
+.subject-card p {
+    color: var(--curriculum-text-muted) !important;
+    line-height: 1.6;
+    position: relative;
+    z-index: 2;
+}
+
+.subject-overview {
+    margin-top: 3em;
+    text-align: center;
+}
+
+.subject-overview .slide-container {
+    max-width: 800px;
+    margin: 0 auto;
+    height: 400px;
+}
+
+/* ========== 비교과교육 ========== */
+.extracurricular-grid {
+    margin-top: 3em;
+}
+
+.activity-card {
+    background: var(--curriculum-dark);
+    border: 1px solid var(--curriculum-border);
+    border-radius: 20px;
+    padding: 3em;
+    height: 100%;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.activity-card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 4px;
+    background: var(--curriculum-gradient);
+    transition: left 0.6s ease;
+}
+
+.activity-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(220, 38, 38, 0.3);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.activity-card:hover:before {
+    left: 0;
+}
+
+.activity-icon {
+    width: 70px;
+    height: 70px;
+    background: rgba(30, 64, 175, 0.1);
+    color: var(--curriculum-secondary);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5em;
+    font-size: 1.8em;
+    transition: all 0.4s ease;
+}
+
+.activity-card:hover .activity-icon {
+    background: var(--curriculum-secondary);
+    color: white;
+    transform: scale(1.1);
+}
+
+.activity-card h3 {
+    color: var(--curriculum-text) !important;
+    font-size: 1.4em;
+    margin-bottom: 1em;
+    font-weight: 700;
+}
+
+.activity-card p {
+    color: var(--curriculum-text-muted) !important;
+    line-height: 1.7;
+    margin-bottom: 2em;
+}
+
+.activity-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.activity-list li {
+    color: var(--curriculum-text) !important;
+    padding: 0.8em 0;
+    border-bottom: 1px solid var(--curriculum-border);
+    position: relative;
+    padding-left: 2em;
+    transition: all 0.3s ease;
+}
+
+.activity-list li:before {
+    content: '●';
+    color: var(--curriculum-secondary);
+    position: absolute;
+    left: 0;
+    font-size: 0.8em;
+    transition: all 0.3s ease;
+}
+
+.activity-list li:hover {
+    color: var(--curriculum-secondary) !important;
+    padding-left: 2.5em;
+}
+
+.activity-list li:hover:before {
+    transform: scale(1.3);
+}
+
+.activity-list li:last-child {
+    border-bottom: none;
+}
+
+.extracurricular-overview {
+    margin-top: 3em;
+    text-align: center;
+}
+
+.extracurricular-overview .slide-container {
+    max-width: 900px;
+    margin: 0 auto;
+    height: 500px;
+}
+
+/* ========== 애니메이션 키프레임 ========== */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ========== 섹션 헤더 애니메이션 ========== */
+.major {
+    animation: fadeInUp 1s ease-out;
+}
+
+.major h2 {
+    background: var(--curriculum-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    text-align: center;
+    font-weight: 800;
+}
+
+.major p {
+    color: var(--curriculum-text-muted) !important;
+    font-size: 1.1em;
+    line-height: 1.7;
+    text-align: center;
+    margin-bottom: 2em;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ========== 반응형 디자인 ========== */
+@media screen and (max-width: 1280px) {
+    .program-card {
+        grid-template-columns: auto 1fr;
+        gap: 2em;
+    }
+    
+    .program-image {
+        width: 250px;
+        height: 170px;
+    }
+    
+    .subject-overview .slide-container,
+    .extracurricular-overview .slide-container {
+        height: 350px;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .curriculum-nav .actions.fit {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .curriculum-nav .actions.fit li {
+        width: 100%;
+        min-width: auto;
+    }
+    
+    .program-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2em;
+    }
+    
+    .program-card.reverse {
+        grid-template-columns: 1fr;
+    }
+    
+    .program-card.reverse .program-image {
+        order: 0;
+    }
+    
+    .program-image {
+        width: 100%;
+        height: 250px;
+        margin: 0 auto;
+    }
+    
+    .subject-overview .slide-container,
+    .extracurricular-overview .slide-container {
+        height: 300px;
+    }
+    
+    .education-description {
+        margin-top: 2em;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .program-card {
+        padding: 2em;
+    }
+    
+    .program-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5em;
+    }
+    
+    .activity-icon,
+    .subject-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5em;
+    }
+    
+    .program-content h3,
+    .activity-card h3,
+    .subject-card h3 {
+        font-size: 1.3em;
+    }
+    
+    .major h2 {
+        font-size: 2em;
+    }
+    
+    .major p {
+        font-size: 1em;
+    }
+    
+    .subject-overview .slide-container,
+    .extracurricular-overview .slide-container {
+        height: 250px;
+    }
+    
+    .education-description {
+        padding: 1.5em;
+    }
+    
+    .activity-card,
+    .subject-card {
+        padding: 2em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .program-card {
+        padding: 1.5em;
+    }
+    
+    .program-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3em;
+    }
+    
+    .activity-icon,
+    .subject-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3em;
+    }
+    
+    .major h2 {
+        font-size: 1.6em;
+    }
+    
+    .curriculum-nav .button {
+        padding: 0.8em 1.5em !important;
+        font-size: 0.9em !important;
+    }
+    
+    .subject-overview .slide-container,
+    .extracurricular-overview .slide-container {
+        height: 200px;
+    }
+    
+    .activity-card,
+    .subject-card {
+        padding: 1.5em;
+    }
+    
+    .education-description {
+        padding: 1.5em;
+    }
+    
+    .education-description h3 {
+        font-size: 1.4em;
+    }
+}

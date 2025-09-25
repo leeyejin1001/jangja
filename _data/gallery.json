@@ -1,0 +1,66 @@
+{
+  "moments": [
+    {
+      "title": "매일 예배",
+      "description": "하나님께 드리는 거룩한 예배",
+      "image": "/assets/images/uploads/prayer-time.jpg",
+      "date": "2024-01-15"
+    },
+    {
+      "title": "열심히 공부하는 모습",
+      "description": "말씀과 지식을 배우는 시간",
+      "image": "/assets/images/uploads/study-time.jpg",
+      "date": "2024-01-14"
+    },
+    {
+      "title": "함께하는 기도",
+      "description": "마음을 모아 기도하는 시간",
+      "image": "/assets/images/uploads/group-prayer.jpg",
+      "date": "2024-01-13"
+    },
+    {
+      "title": "체육활동",
+      "description": "건강한 몸과 마음 기르기",
+      "image": "/assets/images/uploads/sports-activity.jpg",
+      "date": "2024-01-12"
+    },
+    {
+      "title": "특별활동",
+      "description": "다양한 경험과 배움의 시간",
+      "image": "/assets/images/uploads/special-activity.jpg",
+      "date": "2024-01-11"
+    }
+  ],
+  "works": [
+    {
+      "title": "미술 작품",
+      "description": "하나님이 주신 창조성을 표현",
+      "image": "/assets/images/uploads/art-work-1.jpg",
+      "date": "2024-01-12"
+    },
+    {
+      "title": "서예 작품",
+      "description": "말씀을 아름답게 써내려가며",
+      "image": "/assets/images/uploads/calligraphy-1.jpg",
+      "date": "2024-01-11"
+    },
+    {
+      "title": "만들기 작품",
+      "description": "정성스럽게 만든 손작업",
+      "image": "/assets/images/uploads/craft-work.jpg",
+      "date": "2024-01-10"
+    },
+    {
+      "title": "글짓기 작품",
+      "description": "마음을 담은 아름다운 글",
+      "image": "/assets/images/uploads/writing-work.jpg",
+      "date": "2024-01-09"
+    },
+    {
+      "title": "과학 작품",
+      "description": "탐구하고 실험한 결과물",
+      "image": "/assets/images/uploads/science-work.jpg",
+      "date": "2024-01-08"
+    }
+  ]
+}

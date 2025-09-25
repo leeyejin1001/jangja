@@ -1,0 +1,2749 @@
+/* ========== SCHOOL INTRO PAGE STYLES ========== */
+
+/* 서브 네비게이션 스타일 */
+.sub-nav .actions.fit .button {
+	background: transparent !important;
+	color: var(--text-secondary) !important;
+	border: 2px solid var(--border-color) !important;
+	font-weight: 500;
+	transition: all 0.3s ease;
+	font-size: 0.8em !important;
+	padding: 0.6em 1.5em !important;
+	text-align: center !important;
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	height: 2.5em !important;
+	line-height: 1 !important;
+	white-space: nowrap !important;
+}
+
+.sub-nav .actions.fit .button:hover {
+	background: var(--primary-red) !important;
+	color: white !important;
+	border-color: var(--primary-red) !important;
+	transform: translateY(-2px);
+	box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3) !important;
+}
+
+/* 심볼 카드 스타일 */
+.symbol-card {
+	background: var(--dark-card) !important;
+	border: 1px solid var(--border-color) !important;
+	border-radius: 16px;
+	padding: 2.5rem;
+	text-align: center;
+	transition: all 0.3s ease;
+	height: 100%;
+}
+
+.symbol-card:hover {
+	transform: translateY(-8px);
+	border-color: rgba(220, 38, 38, 0.3) !important;
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2) !important;
+}
+
+.symbol-icon {
+	width: 80px;
+	height: 80px;
+	background: var(--gradient-primary) !important;
+	border-radius: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto 1.5rem;
+	font-size: 2rem;
+	color: white;
+}
+
+.symbol-card h3 {
+	font-size: 1.25rem;
+	font-weight: 700;
+	margin-bottom: 0.5rem;
+	color: var(--text-primary) !important;
+}
+
+.symbol-card h4 {
+	font-size: 1.1rem;
+	font-weight: 600;
+	margin-bottom: 1rem;
+	color: var(--primary-red) !important;
+}
+
+.symbol-card p {
+	color: var(--text-secondary) !important;
+	line-height: 1.6;
+}
+
+/* 연혁 리스트 스타일 */
+.history-list {
+	list-style: none;
+	padding: 0;
+	margin: 2rem 0;
+}
+
+.history-list li {
+	margin-bottom: 1.5rem;
+	padding-bottom: 1.5rem;
+	border-bottom: 1px solid var(--border-color) !important;
+}
+
+.history-list li:last-child {
+	border-bottom: none;
+}
+
+.history-item {
+	display: flex;
+	align-items: flex-start;
+	gap: 1.5rem;
+}
+
+.history-year {
+	background: var(--gradient-primary) !important;
+	color: white;
+	padding: 0.5rem 1rem;
+	border-radius: 8px;
+	font-weight: 600;
+	font-size: 0.9rem;
+	min-width: 100px;
+	text-align: center;
+	flex-shrink: 0;
+}
+
+.history-desc {
+	color: var(--text-secondary) !important;
+	line-height: 1.6;
+	flex-grow: 1;
+}
+
+/* 위치 카드 스타일 */
+.location-card {
+	background: var(--dark-card) !important;
+	border: 1px solid var(--border-color) !important;
+	border-radius: 16px;
+	padding: 2.5rem;
+	transition: all 0.3s ease;
+	height: 100%;
+}
+
+.location-card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2) !important;
+}
+
+.location-icon {
+	width: 60px;
+	height: 60px;
+	background: rgba(30, 64, 175, 0.1) !important;
+	color: var(--primary-blue) !important;
+	border-radius: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 1.5rem;
+	font-size: 1.5rem;
+}
+
+.location-card h3 {
+	font-size: 1.25rem;
+	font-weight: 700;
+	margin-bottom: 1rem;
+	color: var(--text-primary) !important;
+}
+
+.location-info {
+	list-style: none;
+	padding: 0;
+	margin-bottom: 1.5rem;
+}
+
+.location-info li {
+	color: var(--text-secondary) !important;
+	padding: 0.5rem 0;
+	border-bottom: 1px solid var(--border-color) !important;
+}
+
+.location-info li:last-child {
+	border-bottom: none;
+}
+
+.location-info strong {
+	color: var(--text-primary) !important;
+}
+
+/* 콘텐츠 섹션 스타일 */
+.content-section {
+	margin: 3rem 0;
+	padding: 2.5rem;
+	background: var(--dark-card) !important;
+	border: 1px solid var(--border-color) !important;
+	border-radius: 16px;
+}
+
+.content-section h3 {
+	color: var(--text-primary) !important;
+	margin-bottom: 1.5rem;
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+
+.content-section p {
+	color: var(--text-secondary) !important;
+	line-height: 1.7;
+}
+
+/* Features 스타일 덮어쓰기 (페이지별) */
+#vision .features li .icon,
+#staff .features li .icon {
+	color: var(--primary-red) !important;
+	background: rgba(220, 38, 38, 0.1) !important;
+	border-color: var(--primary-red) !important;
+}
+
+#vision .features li:hover .icon,
+#staff .features li:hover .icon {
+	transform: rotate(-45deg) scale(1.1);
+	box-shadow: 0 12px 30px rgba(220, 38, 38, 0.3) !important;
+}
+
+/* 반응형 스타일 */
+@media screen and (max-width: 980px) {
+	.sub-nav .actions.fit {
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+	
+	.sub-nav .actions.fit .button {
+		margin-bottom: 0.5rem;
+		width: 100%;
+	}
+	
+	.symbol-card,
+	.location-card {
+		margin-bottom: 2rem;
+	}
+	
+	.history-item {
+		flex-direction: column;
+		gap: 1rem;
+	}
+	
+	.history-year {
+		align-self: flex-start;
+	}
+}
+
+@media screen and (max-width: 736px) {
+	.symbol-card,
+	.location-card,
+	.content-section {
+		padding: 1.5rem;
+	}
+	
+	.symbol-icon,
+	.location-icon {
+		width: 50px;
+		height: 50px;
+		font-size: 1.25rem;
+	}
+}/* 기존 Spectral 버튼 스타일 완전 덮어쓰기 */
+input[type="submit"], input[type="reset"], input[type="button"], button, .button {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	-ms-appearance: none;
+	appearance: none;
+	-moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+	-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+	-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+	transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+	background-color: transparent;
+	border-radius: 3px;
+	border: 0;
+	box-shadow: inset 0 0 0 2px var(--primary-blue);
+	color: var(--primary-blue);
+	cursor: pointer;
+	display: inline-block;
+	font-size: 0.8em;
+	font-weight: 600;
+	height: 3.125em;
+	letter-spacing: 0.225em;
+	line-height: 3.125em;
+	max-width: 30em;
+	padding: 0 2.75em;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/* main.css 버튼 스타일 완전 덮어쓰기 - 더 높은 우선순위 */
+body.landing #page-wrapper #gallery .features li .button.small,
+body.landing #page-wrapper #gallery .features li .button,
+body.landing #page-wrapper #gallery ul.features li .button.small,
+body.landing #page-wrapper #gallery ul.features li .button,
+body.landing #page-wrapper .wrapper.style3 .features li .button.small,
+body.landing #page-wrapper .wrapper.style3 .features li .button,
+body.landing #page-wrapper .wrapper.style3 ul.features li .button.small,
+body.landing #page-wrapper .wrapper.style3 ul.features li .button,
+body #page-wrapper #gallery .features li .button.small,
+body #page-wrapper #gallery .features li .button,
+body #page-wrapper #gallery ul.features li .button.small,
+body #page-wrapper #gallery ul.features li .button {
+	background: var(--gradient-primary) !important;
+	color: white !important;
+	border: 0 !important;
+	box-shadow: none !important;
+	outline: 0 !important;
+	padding: 0.8em 2.5em !important;
+	border-radius: 8px !important;
+	font-weight: 600 !important;
+	text-decoration: none !important;
+	display: inline-block !important;
+	font-size: 0.9em !important;
+	min-width: 140px !important;
+	transition: all 0.3s ease !important;
+	text-transform: uppercase !important;
+	letter-spacing: 0.5px !important;
+	height: auto !important;
+	line-height: 1.2 !important;
+	max-width: none !important;
+	white-space: nowrap !important;
+	overflow: visible !important;
+	text-overflow: clip !important;
+	cursor: pointer !important;
+	text-align: center !important;
+	vertical-align: middle !important;
+	-moz-appearance: none !important;
+	-webkit-appearance: none !important;
+	-ms-appearance: none !important;
+	appearance: none !important;
+}
+
+/* 호버 상태도 높은 우선순위로 */
+body.landing #page-wrapper #gallery .features li .button.small:hover,
+body.landing #page-wrapper #gallery .features li .button:hover,
+body.landing #page-wrapper #gallery ul.features li .button.small:hover,
+body.landing #page-wrapper #gallery ul.features li .button:hover,
+body.landing #page-wrapper .wrapper.style3 .features li .button.small:hover,
+body.landing #page-wrapper .wrapper.style3 .features li .button:hover,
+body.landing #page-wrapper .wrapper.style3 ul.features li .button.small:hover,
+body.landing #page-wrapper .wrapper.style3 ul.features li .button:hover,
+body #page-wrapper #gallery .features li .button.small:hover,
+body #page-wrapper #gallery .features li .button:hover,
+body #page-wrapper #gallery ul.features li .button.small:hover,
+body #page-wrapper #gallery ul.features li .button:hover {
+	background: var(--gradient-accent) !important;
+	color: white !important;
+	border: 0 !important;
+	box-shadow: 0 12px 35px rgba(220, 38, 38, 0.4) !important;
+	outline: 0 !important;
+	transform: translateY(-3px) !important;
+}
+
+/* 추가 보험 - 인라인 스타일 수준의 우선순위 */
+[id="gallery"] .features li .button.small[class*="button"],
+[id="gallery"] .features li .button[class*="button"],
+[id="gallery"] ul.features li .button.small[class*="button"],
+[id="gallery"] ul.features li .button[class*="button"] {
+	border-width: 0px !important;
+	border-style: none !important;
+	border-color: transparent !important;
+	border: 0px none transparent !important;
+	box-shadow: none !important;
+	outline: 0px none transparent !important;
+}/* 헤더 스크롤 시에도 흰색 유지 */
+#header.scrolled h1 a,
+#header:not(.alt) h1 a {
+	color: var(--text-primary) !important;
+	font-weight: 700;
+	text-decoration: none;
+	border: none;
+}/* 장자기독학교 커스텀 스타일 - Juilliard 다크 테마 */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+	/* Juilliard 스타일 다크 테마 컬러 */
+	--primary-red: #dc2626;          /* Juilliard 빨강 */
+	--primary-blue: #1e40af;         /* Juilliard 파랑 */
+	--dark-bg: #0a0a0a;              /* 메인 배경 */
+	--dark-surface: #1a1a1a;         /* 카드/섹션 배경 */
+	--dark-card: #2a2a2a;            /* 카드 배경 */
+	--text-primary: #ffffff;         /* 주요 텍스트 */
+	--text-secondary: #a1a1aa;       /* 보조 텍스트 */
+	--text-muted: #71717a;           /* 흐린 텍스트 */
+	--border-color: #404040;         /* 보더 색상 */
+	
+	/* 그라데이션 */
+	--gradient-primary: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-blue) 100%);
+	--gradient-dark: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+	--gradient-accent: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-red) 100%);
+}
+
+/* ========== BODY & BASIC OVERRIDES ========== */
+body {
+	background: var(--dark-bg) !important;
+	color: var(--text-primary) !important;
+	font-family: 'Noto Sans KR', 'Inter', sans-serif !important;
+}
+
+body, input, select, textarea {
+	color: var(--text-primary) !important;
+	font-weight: 400;
+}
+
+strong, b {
+	color: var(--text-primary) !important;
+	font-weight: 600;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: var(--text-primary) !important;
+	font-weight: 600;
+}
+
+/* ========== HEADER IMPROVEMENTS ========== */
+#header {
+	background: rgba(10, 10, 10, 0.95) !important;
+	backdrop-filter: blur(20px);
+	-webkit-backdrop-filter: blur(20px);
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+	border-bottom: 1px solid #ffffff !important;
+	transition: all 0.3s ease !important;
+}
+
+#header h1 a {
+	color: var(--text-primary) !important;
+	font-weight: 700;
+	text-decoration: none;
+	border: none;
+}
+
+#header nav > ul > li > a {
+	color: var(--text-secondary) !important;
+	font-weight: 500;
+	transition: all 0.3s ease;
+}
+
+#header nav > ul > li > a:hover {
+	color: var(--text-primary) !important;
+}
+
+#header.alt {
+	background: rgba(10, 10, 10, 0.95) !important;
+	backdrop-filter: blur(20px);
+}
+
+#header.alt h1 a {
+	color: var(--text-primary) !important;
+}
+
+#header.alt nav > ul > li > a {
+	color: var(--text-secondary) !important;
+}
+
+/* ========== BANNER IMPROVEMENTS ========== */
+#banner {
+	background: var(--gradient-dark) !important;
+	color: var(--text-primary) !important;
+	position: relative;
+	overflow: hidden;
+}
+
+#banner:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="%23dc2626" stop-opacity="0.1"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs><circle cx="200" cy="200" r="300" fill="url(%23a)"/><circle cx="800" cy="800" r="400" fill="url(%23a)"/></svg>');
+	opacity: 0.3;
+	pointer-events: none;
+}
+
+#banner .inner {
+	position: relative;
+	z-index: 2;
+}
+
+#banner h2 {
+	font-size: 3em;
+	font-weight: 800;
+	margin-bottom: 0.5em;
+	text-shadow: none;
+	color: var(--text-primary) !important;
+	background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+#banner p {
+	font-size: 1.2em;
+	margin-bottom: 2em;
+	color: var(--text-secondary) !important;
+	line-height: 1.6;
+	font-weight: 300;
+}
+
+#banner h2:before, #banner h2:after {
+	background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-blue) 100%) !important;
+	height: 2px !important;
+}
+
+/* ========== WRAPPER STYLE IMPROVEMENTS ========== */
+
+/* Style 1 - About Section */
+.wrapper.style1 {
+	background: var(--dark-surface) !important;
+	color: var(--text-primary) !important;
+}
+
+.wrapper.style1 h2, .wrapper.style1 h3, .wrapper.style1 h4, .wrapper.style1 h5, .wrapper.style1 h6 {
+	color: var(--text-primary) !important;
+}
+
+.wrapper.style1 strong, .wrapper.style1 b {
+	color: var(--text-primary) !important;
+}
+
+.wrapper.style1 header p {
+	color: var(--text-secondary) !important;
+}
+
+.wrapper.style1 header.major h2, .wrapper.style1 header.major h3, .wrapper.style1 header.major h4, .wrapper.style1 header.major h5, .wrapper.style1 header.major h6 {
+	border-color: #ffffff !important;
+}
+
+.wrapper.style1 header.major p {
+	color: var(--text-secondary) !important;
+}
+
+.wrapper.style1 .icon.major {
+	border-color: #ffffff !important;
+	background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.wrapper.style1 .icon.style1 {
+	color: var(--primary-red) !important;
+}
+
+.wrapper.style1 .icon.style2 {
+	color: var(--primary-blue) !important;
+}
+
+.wrapper.style1 .icon.style3 {
+	color: var(--primary-red) !important;
+}
+
+/* Style 2 - Education Section */
+.wrapper.style2 {
+	background: var(--dark-bg) !important;
+}
+
+/* Style 3 - Programs Section */
+.wrapper.style3 {
+	background: var(--dark-surface) !important;
+	color: var(--text-primary) !important;
+}
+
+.wrapper.style3 h2, .wrapper.style3 h3, .wrapper.style3 h4, .wrapper.style3 h5, .wrapper.style3 h6 {
+	color: var(--text-primary) !important;
+}
+
+.wrapper.style3 strong, .wrapper.style3 b {
+	color: var(--text-primary) !important;
+}
+
+.wrapper.style3 header p {
+	color: var(--text-secondary) !important;
+}
+
+.wrapper.style3 header.major h2, .wrapper.style3 header.major h3, .wrapper.style3 header.major h4, .wrapper.style3 header.major h5, .wrapper.style3 header.major h6 {
+	border-color: #ffffff !important;
+}
+
+.wrapper.style3 header.major p {
+	color: var(--text-secondary) !important;
+}
+
+/* Style 4 - CTA Section */
+.wrapper.style4 {
+	background: var(--gradient-primary) !important;
+	color: white !important;
+	position: relative;
+}
+
+.wrapper.style4:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
+	pointer-events: none;
+}
+
+.wrapper.style4 .inner {
+	position: relative;
+	z-index: 2;
+}
+
+.wrapper.style4 h2 {
+	color: white !important;
+	font-size: 2.2em;
+	font-weight: 700;
+	text-shadow: none;
+}
+
+.wrapper.style4 p {
+	color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Style 5 - School Info Section */
+.wrapper.style5 {
+	background: var(--dark-bg) !important;
+	color: var(--text-primary) !important;
+}
+
+.wrapper.style5 h2, .wrapper.style5 h3, .wrapper.style5 h4, .wrapper.style5 h5, .wrapper.style5 h6 {
+	color: var(--text-primary) !important;
+}
+
+.wrapper.style5 strong, .wrapper.style5 b {
+	color: var(--text-primary) !important;
+}
+
+.wrapper.style5 ul.alt li {
+	border-color: #ffffff !important;
+	color: var(--text-secondary) !important;
+}
+
+.wrapper.style5 ul.alt li strong {
+	color: var(--text-primary) !important;
+}
+
+/* ========== SPOTLIGHT IMPROVEMENTS ========== */
+.spotlight:nth-child(1) { 
+	background: rgba(220, 38, 38, 0.05) !important;
+}
+
+.spotlight:nth-child(2) { 
+	background: rgba(30, 64, 175, 0.05) !important;
+}
+
+.spotlight:nth-child(3) { 
+	background: rgba(220, 38, 38, 0.08) !important;
+}
+
+.spotlight h2 {
+	color: var(--text-primary) !important;
+	font-size: 1.8em;
+	font-weight: 700;
+}
+
+.spotlight p {
+	color: var(--text-secondary) !important;
+}
+
+.spotlight .content {
+	padding: 3em 4em 2em 4em;
+}
+
+/* ========== FEATURES SECTION 다크 테마 적용 ========== */
+.wrapper.style3 .features,
+.wrapper.style3 ul.features {
+	display: flex !important;
+	flex-wrap: wrap !important;
+	justify-content: center !important;
+	list-style: none !important;
+	padding: 0 !important;
+	width: 100% !important;
+	margin: 0 !important;
+}
+
+.wrapper.style3 .features li,
+.wrapper.style3 ul.features li {
+	display: flex !important;
+	flex-direction: column !important;
+	position: relative !important;
+	text-align: center !important;
+	width: 50% !important;
+	min-height: 480px !important;
+	padding: 3em 2.5em 5em 2.5em !important;
+	margin: 0 !important;
+	align-items: center !important;
+	justify-content: flex-start !important;
+	box-sizing: border-box !important;
+	border: 1px solid #ffffff !important;
+	transition: all 0.3s ease !important;
+}
+
+.wrapper.style3 .features li:hover {
+	transform: translateY(-8px) !important;
+	border-color: rgba(220, 38, 38, 0.3) !important;
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* 아이콘 스타일 */
+.wrapper.style3 .features li:before,
+.wrapper.style3 ul.features li:before {
+	display: none !important;
+}
+
+.wrapper.style3 .features li.icon:after,
+.wrapper.style3 ul.features li.icon:after {
+	display: block !important;
+	position: static !important;
+	font-family: 'Font Awesome 5 Free' !important;
+	font-weight: 900 !important;
+	font-size: 3em !important;
+	color: var(--primary-red) !important;
+	margin: 0 0 1.5em 0 !important;
+	text-align: center !important;
+	width: 100% !important;
+	line-height: 1 !important;
+	flex-shrink: 0 !important;
+	order: -1 !important;
+	background: var(--gradient-primary) !important;
+	background-clip: text !important;
+	-webkit-background-clip: text !important;
+	-webkit-text-fill-color: transparent !important;
+}
+
+/* 개별 아이콘 정의 */
+.wrapper.style3 .features li.icon.solid.fa-user-graduate:after {
+	content: '\f501' !important;
+}
+
+.wrapper.style3 .features li.icon.solid.fa-book-open:after {
+	content: '\f518' !important;
+}
+
+.wrapper.style3 .features li.icon.solid.fa-calendar-alt:after {
+	content: '\f073' !important;
+}
+
+.wrapper.style3 .features li.icon.solid.fa-video:after {
+	content: '\f03d' !important;
+}
+
+.wrapper.style3 .features li.icon.solid.fa-bullhorn:after {
+	content: '\f0a1' !important;
+}
+
+.wrapper.style3 .features li.icon.solid.fa-map-marker-alt:after {
+	content: '\f3c5' !important;
+}
+
+/* 제목 스타일 */
+.wrapper.style3 .features li h3,
+.wrapper.style3 ul.features li h3 {
+	margin: 0 0 1.5em 0 !important;
+	color: var(--text-primary) !important;
+	font-size: 1.25em !important;
+	font-weight: 700 !important;
+	text-align: center !important;
+	width: 100% !important;
+	flex-shrink: 0 !important;
+	order: 1 !important;
+}
+
+/* 설명 텍스트 */
+.wrapper.style3 .features li p,
+.wrapper.style3 ul.features li p {
+	margin: 0 0 2.5em 0 !important;
+	flex-grow: 1 !important;
+	line-height: 1.6 !important;
+	font-size: 1em !important;
+	text-align: center !important;
+	width: 100% !important;
+	color: var(--text-secondary) !important;
+	order: 2 !important;
+}
+
+/* 액션 버튼 컨테이너 */
+.wrapper.style3 .features li ul.actions,
+.wrapper.style3 ul.features li ul.actions {
+	margin: 0 !important;
+	padding: 0 !important;
+	list-style: none !important;
+	display: flex !important;
+	justify-content: center !important;
+	align-items: center !important;
+	flex-shrink: 0 !important;
+	width: 100% !important;
+	position: absolute !important;
+	bottom: 1.5em !important;
+	left: 0 !important;
+	right: 0 !important;
+}
+
+.wrapper.style3 .features li ul.actions li,
+.wrapper.style3 ul.features li ul.actions li {
+	margin: 0 !important;
+	padding: 0 !important;
+	width: auto !important;
+	min-height: auto !important;
+	background: none !important;
+	display: block !important;
+	text-align: center !important;
+	position: static !important;
+}
+
+/* Features 버튼 스타일 - 최강 우선순위로 테두리 제거 */
+.wrapper.style3 .features li .button.small,
+.wrapper.style3 ul.features li .button.small,
+.wrapper.style3 .features li .button,
+.wrapper.style3 ul.features li .button,
+.features li .button.small,
+ul.features li .button.small,
+.features li .button,
+ul.features li .button,
+.wrapper.style3 .features li a.button,
+.wrapper.style3 ul.features li a.button,
+section.wrapper.style3 .features li .button,
+section.wrapper.style3 ul.features li .button {
+	display: inline-block !important;
+	padding: 0.8em 2.5em !important;
+	font-size: 0.9em !important;
+	font-weight: 600 !important;
+	background: var(--gradient-primary) !important;
+	color: white !important;
+	border: 0 !important;
+	border-width: 0 !important;
+	border-style: none !important;
+	border-color: transparent !important;
+	border-radius: 8px !important;
+	transition: all 0.3s ease !important;
+	text-decoration: none !important;
+	white-space: nowrap !important;
+	min-width: 140px !important;
+	line-height: 1.2 !important;
+	text-align: center !important;
+	position: static !important;
+	transform: none !important;
+	margin: 0 auto !important;
+	box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3) !important;
+	outline: 0 !important;
+	outline-width: 0 !important;
+	outline-style: none !important;
+	outline-color: transparent !important;
+}
+
+.wrapper.style3 .features li .button.small:hover,
+.wrapper.style3 ul.features li .button.small:hover,
+.wrapper.style3 .features li .button:hover,
+.wrapper.style3 ul.features li .button:hover,
+.features li .button.small:hover,
+ul.features li .button.small:hover,
+.features li .button:hover,
+ul.features li .button:hover,
+.wrapper.style3 .features li a.button:hover,
+.wrapper.style3 ul.features li a.button:hover,
+section.wrapper.style3 .features li .button:hover,
+section.wrapper.style3 ul.features li .button:hover,
+.wrapper.style3 .features li .button.small:focus,
+.wrapper.style3 ul.features li .button.small:focus,
+.wrapper.style3 .features li .button:focus,
+.wrapper.style3 ul.features li .button:focus {
+	background: var(--gradient-accent) !important;
+	transform: translateY(-2px) !important;
+	box-shadow: 0 8px 25px rgba(220, 38, 38, 0.4) !important;
+	color: white !important;
+	border: 0 !important;
+	border-width: 0 !important;
+	border-style: none !important;
+	border-color: transparent !important;
+	outline: 0 !important;
+	outline-width: 0 !important;
+	outline-style: none !important;
+	outline-color: transparent !important;
+}
+
+/* 모든 상태에서 테두리 제거 - 추가 보험 */
+.wrapper.style3 .features li .button.small:active,
+.wrapper.style3 .features li .button.small:visited,
+.wrapper.style3 .features li .button:active,
+.wrapper.style3 .features li .button:visited {
+	border: 0 !important;
+	border-width: 0 !important;
+	outline: 0 !important;
+	outline-width: 0 !important;
+}
+
+/* 카드 배경색 */
+.wrapper.style3 .features li:nth-child(1) {
+	background: var(--dark-card) !important;
+}
+
+.wrapper.style3 .features li:nth-child(2) {
+	background: var(--dark-card) !important;
+}
+
+.wrapper.style3 .features li:nth-child(3) {
+	background: var(--dark-card) !important;
+}
+
+.wrapper.style3 .features li:nth-child(4) {
+	background: var(--dark-card) !important;
+}
+
+.wrapper.style3 .features li:nth-child(5) {
+	background: var(--dark-card) !important;
+}
+
+.wrapper.style3 .features li:nth-child(6) {
+	background: var(--dark-card) !important;
+}
+
+/* ========== BUTTON IMPROVEMENTS ========== */
+.button.primary {
+	background: var(--gradient-primary) !important;
+	border: none !important;
+	color: white !important;
+	padding: 0 3em;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	transition: all 0.3s ease;
+	box-shadow: 0 8px 25px rgba(220, 38, 38, 0.3) !important;
+}
+
+.button.primary:hover {
+	transform: translateY(-3px) !important;
+	box-shadow: 0 12px 35px rgba(220, 38, 38, 0.4) !important;
+	background: var(--gradient-accent) !important;
+	color: white !important;
+}
+
+.button.primary:active {
+	transform: translateY(-1px) !important;
+	box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3) !important;
+}
+
+/* 일반 버튼 스타일 */
+.button {
+	border: 2px solid var(--primary-blue) !important;
+	color: var(--primary-blue) !important;
+	background: transparent !important;
+	transition: all 0.3s ease;
+	font-weight: 500;
+}
+
+.button:hover {
+	background-color: var(--primary-blue) !important;
+	color: white !important;
+	transform: translateY(-2px);
+	box-shadow: 0 8px 25px rgba(30, 64, 175, 0.3) !important;
+}
+
+/* ========== MENU IMPROVEMENTS ========== */
+#menu {
+	background: var(--dark-surface) !important;
+	border-left: 1px solid var(--border-color) !important;
+}
+
+#menu ul > li {
+	border-top: 1px solid #ffffff !important;
+}
+
+#menu ul > li > a {
+	color: var(--text-secondary) !important;
+	font-weight: 500;
+	transition: color 0.3s ease;
+}
+
+#menu ul > li > a:hover {
+	color: var(--primary-red) !important;
+}
+
+/* ========== FOOTER IMPROVEMENTS ========== */
+#footer {
+	background: var(--dark-surface) !important;
+	border-top: 1px solid #ffffff !important;
+	position: relative;
+}
+
+#footer .icons a {
+	color: var(--text-secondary) !important;
+	transition: all 0.3s ease;
+	background: var(--dark-card) !important;
+	border: 1px solid #ffffff !important;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#footer .icons a:hover {
+	color: white !important;
+	background: var(--primary-red) !important;
+	border-color: var(--primary-red) !important;
+	transform: translateY(-2px);
+}
+
+#footer .copyright {
+	color: var(--text-muted) !important;
+}
+
+#footer .copyright a {
+	color: var(--text-secondary) !important;
+}
+
+#footer .copyright a:hover {
+	color: var(--primary-red) !important;
+}
+
+/* ========== LANDING PAGE BACKGROUND OVERRIDE ========== */
+body.landing #page-wrapper {
+	background: var(--dark-bg) !important;
+}
+
+body.landing #banner {
+	background: var(--gradient-dark) !important;
+}
+
+/* 모바일에서도 다크 테마 유지 */
+body.is-mobile.landing #banner {
+	background: var(--gradient-dark) !important;
+}
+
+body.is-mobile.landing .wrapper.style4 {
+	background: var(--gradient-primary) !important;
+}
+
+/* ========== RESPONSIVE IMPROVEMENTS ========== */
+@media screen and (max-width: 980px) {
+	#banner h2 {
+		font-size: 2.2em;
+	}
+	
+	#banner p {
+		font-size: 1.1em;
+	}
+	
+	.spotlight .content {
+		padding: 2em 3em 1em 3em;
+	}
+	
+	/* 태블릿에서 features를 세로로 */
+	.wrapper.style3 .features li,
+	.wrapper.style3 ul.features li {
+		width: 50% !important;
+		padding: 2.5em 2em 5em 2em !important;
+		min-height: 450px !important;
+	}
+}
+
+@media screen and (max-width: 736px) {
+	#banner h2 {
+		font-size: 1.8em;
+	}
+	
+	#banner p {
+		font-size: 1em;
+		line-height: 1.5;
+	}
+	
+	.spotlight .content {
+		padding: 2em 1em;
+	}
+	
+	.wrapper.style4 h2 {
+		font-size: 1.6em;
+	}
+	
+	/* 모바일에서 features를 1열로 */
+	.wrapper.style3 .features li,
+	.wrapper.style3 ul.features li {
+		width: 100% !important;
+		padding: 2.5em 2em 2em 2em !important;
+		min-height: auto !important;
+		background-color: var(--dark-card) !important;
+		border-top: solid 2px var(--border-color) !important;
+		border-left: none !important;
+		border-right: none !important;
+		border-bottom: none !important;
+		position: relative !important;
+		justify-content: flex-start !important;
+	}
+	
+	.wrapper.style3 .features li:first-child {
+		border-top: 0 !important;
+	}
+	
+	.wrapper.style3 .features li ul.actions {
+		position: static !important;
+		margin-top: 1.5em !important;
+		bottom: auto !important;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	#banner h2 {
+		font-size: 1.5em;
+	}
+	
+	.button.primary {
+		padding: 0 2em;
+		font-size: 0.9em;
+	}
+}
+
+/* ========== SPECIAL ANIMATIONS ========== */
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes float {
+	0%, 100% { transform: translateY(0px); }
+	50% { transform: translateY(-10px); }
+}
+
+.wrapper.style1 .icons.major li {
+	animation: fadeInUp 0.6s ease-out;
+	animation-delay: 0.2s;
+	animation-fill-mode: both;
+}
+
+.wrapper.style1 .icons.major li:nth-child(2) {
+	animation-delay: 0.4s;
+}
+
+.wrapper.style1 .icons.major li:nth-child(3) {
+	animation-delay: 0.6s;
+}
+
+.wrapper.style3 .features li {
+	animation: fadeInUp 0.8s ease-out;
+	animation-fill-mode: both;
+}
+
+.wrapper.style3 .features li:nth-child(1) { animation-delay: 0.1s; }
+.wrapper.style3 .features li:nth-child(2) { animation-delay: 0.2s; }
+.wrapper.style3 .features li:nth-child(3) { animation-delay: 0.3s; }
+.wrapper.style3 .features li:nth-child(4) { animation-delay: 0.4s; }
+.wrapper.style3 .features li:nth-child(5) { animation-delay: 0.5s; }
+.wrapper.style3 .features li:nth-child(6) { animation-delay: 0.6s; }
+
+/* ========== 추가 개선사항 ========== */
+/* 스크롤바 다크 테마 */
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--dark-bg);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--border-color);
+	border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--primary-red);
+}
+
+/* 선택 텍스트 색상 */
+::selection {
+	background: var(--primary-red);
+	color: white;
+}
+
+::-moz-selection {
+	background: var(--primary-red);
+	color: white;
+}
+/* 영성, 지성, 인성 이미지 애니메이션 효과 */
+
+/* Spotlight 이미지 초기 상태 */
+.spotlight .image {
+	opacity: 0;
+	transform: translateX(-50px);
+	transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.spotlight:nth-child(even) .image {
+	transform: translateX(50px);
+}
+
+/* 이미지가 뷰포트에 나타날 때의 애니메이션 */
+.spotlight.animate .image {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+/* 콘텐츠도 같이 애니메이션 */
+.spotlight .content {
+	opacity: 0;
+	transform: translateY(30px);
+	transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s;
+}
+
+.spotlight.animate .content {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/* 각 spotlight별로 딜레이 적용 */
+.spotlight:nth-child(1).animate .image {
+	transition-delay: 0.1s;
+}
+
+.spotlight:nth-child(1).animate .content {
+	transition-delay: 0.3s;
+}
+
+.spotlight:nth-child(2).animate .image {
+	transition-delay: 0.2s;
+}
+
+.spotlight:nth-child(2).animate .content {
+	transition-delay: 0.4s;
+}
+
+.spotlight:nth-child(3).animate .image {
+	transition-delay: 0.3s;
+}
+
+.spotlight:nth-child(3).animate .content {
+	transition-delay: 0.5s;
+}
+
+/* 이미지 호버 효과 개선 */
+.spotlight .image img {
+	transition: transform 0.4s ease, filter 0.4s ease;
+	filter: brightness(0.9);
+}
+
+.spotlight:hover .image img {
+	transform: scale(1.05);
+	filter: brightness(1);
+}
+
+/* 부드러운 그라데이션 오버레이 */
+.spotlight .image::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(135deg, rgba(220, 38, 38, 0.1) 0%, rgba(30, 64, 175, 0.1) 100%);
+	opacity: 0;
+	transition: opacity 0.4s ease;
+	pointer-events: none;
+}
+
+.spotlight:hover .image::before {
+	opacity: 1;
+}
+
+/* 모바일에서 애니메이션 최적화 */
+@media screen and (max-width: 980px) {
+	.spotlight .image,
+	.spotlight:nth-child(even) .image {
+		transform: translateY(30px);
+	}
+	
+	.spotlight.animate .image {
+		transform: translateY(0);
+	}
+	
+	.spotlight .image::before {
+		display: none;
+	}
+}
+
+/* 접근성: 모션 민감성 사용자 대응 */
+@media (prefers-reduced-motion: reduce) {
+	.spotlight .image,
+	.spotlight .content,
+	.spotlight .image img {
+		transition: none !important;
+		transform: none !important;
+		animation: none !important;
+	}
+	
+	.spotlight .image {
+		opacity: 1;
+	}
+	
+	.spotlight .content {
+		opacity: 1;
+	}
+}
+/* 학교안내 features 섹션 크기 축소 - 모든 디바이스 안정화 */
+
+/* 전체 컨테이너 패딩 축소 */
+.wrapper.style3 {
+	padding: 4em 0 3em 0 !important;
+}
+
+/* Features 기본 설정 - flexbox 안정화 */
+.wrapper.style3 .features,
+.wrapper.style3 ul.features {
+	display: flex !important;
+	flex-wrap: wrap !important;
+	justify-content: center !important;
+	align-items: stretch !important;
+	list-style: none !important;
+	padding: 0 !important;
+	width: 100% !important;
+	margin: 0 !important;
+}
+
+/* Features 리스트 아이템 크기 축소 - 데스크톱 */
+.wrapper.style3 .features li,
+.wrapper.style3 ul.features li {
+	display: flex !important;
+	flex-direction: column !important;
+	position: relative !important;
+	text-align: center !important;
+	width: 50% !important;
+	min-height: 320px !important;
+	padding: 2em 1.5em 1em 1.5em !important;
+	margin: 0 !important;
+	align-items: center !important;
+	justify-content: flex-start !important;
+	box-sizing: border-box !important;
+	border: 1px solid #ffffff !important;
+}
+
+/* 아이콘 크기 축소 */
+.wrapper.style3 .features li:after,
+.wrapper.style3 ul.features li:after {
+	display: block !important;
+	position: static !important;
+	font-family: 'Font Awesome 5 Free' !important;
+	font-weight: 900 !important;
+	font-size: 2.2em !important;
+	color: var(--primary-red) !important;
+	margin: 0 0 1em 0 !important;
+	text-align: center !important;
+	width: 100% !important;
+	line-height: 1 !important;
+	flex-shrink: 0 !important;
+	order: -1 !important;
+}
+
+/* 제목 크기 및 여백 축소 */
+.wrapper.style3 .features li h3,
+.wrapper.style3 ul.features li h3 {
+	font-size: 1.1em !important;
+	margin: 0 0 1em 0 !important;
+	color: var(--text-primary) !important;
+	font-weight: 700 !important;
+	text-align: center !important;
+	width: 100% !important;
+	flex-shrink: 0 !important;
+	order: 1 !important;
+}
+
+/* 설명 텍스트 크기 및 여백 축소 */
+.wrapper.style3 .features li p,
+.wrapper.style3 ul.features li p {
+	font-size: 0.9em !important;
+	line-height: 1.5 !important;
+	margin: 0 0 1.5em 0 !important;
+	flex-grow: 1 !important;
+	text-align: center !important;
+	width: 100% !important;
+	color: var(--text-secondary) !important;
+	order: 2 !important;
+}
+
+/* 버튼 컨테이너 */
+.wrapper.style3 .features li ul.actions,
+.wrapper.style3 ul.features li ul.actions {
+	margin: 0 !important;
+	padding: 0 !important;
+	list-style: none !important;
+	display: flex !important;
+	justify-content: center !important;
+	align-items: center !important;
+	flex-shrink: 0 !important;
+	width: 100% !important;
+	position: static !important;
+	order: 3 !important;
+}
+
+/* 버튼 크기 */
+.wrapper.style3 .features li .button.small,
+.wrapper.style3 ul.features li .button.small,
+.wrapper.style3 .features li .button,
+.wrapper.style3 ul.features li .button {
+	padding: 0.6em 2em !important;
+	font-size: 0.8em !important;
+	min-width: 120px !important;
+	margin: 0 !important;
+}
+
+/* 헤더 섹션 크기 축소 */
+.wrapper.style3 header.major {
+	margin: 0 0 2.5em 0 !important;
+}
+
+.wrapper.style3 header.major h2 {
+	font-size: 1.8em !important;
+}
+
+.wrapper.style3 header.major p {
+	font-size: 1em !important;
+}
+
+/* 컴팩트한 느낌을 위한 추가 조정 */
+.wrapper.style3 .inner {
+	max-width: 55em !important;
+}
+
+/* 호버 효과 축소 */
+.wrapper.style3 .features li:hover {
+	transform: translateY(-4px) !important;
+}
+
+/* ===== 반응형 미디어 쿼리 ===== */
+
+/* 큰 태블릿 (1280px 이하) */
+@media screen and (max-width: 1280px) {
+	.wrapper.style3 .features li,
+	.wrapper.style3 ul.features li {
+		width: 50% !important;
+		min-height: 300px !important;
+		padding: 1.8em 1.3em 1em 1.3em !important;
+	}
+	
+	.wrapper.style3 .features li:after,
+	.wrapper.style3 ul.features li:after {
+		font-size: 2em !important;
+	}
+}
+
+/* 태블릿 (980px 이하) */
+@media screen and (max-width: 980px) {
+	.wrapper.style3 {
+		padding: 3em 2em 2em 2em !important;
+	}
+	
+	.wrapper.style3 .features li,
+	.wrapper.style3 ul.features li {
+		width: 50% !important;
+		min-height: 280px !important;
+		padding: 1.5em 1em 1em 1em !important;
+	}
+	
+	.wrapper.style3 .features li:after,
+	.wrapper.style3 ul.features li:after {
+		font-size: 1.8em !important;
+		margin: 0 0 0.8em 0 !important;
+	}
+	
+	.wrapper.style3 .features li h3,
+	.wrapper.style3 ul.features li h3 {
+		font-size: 1em !important;
+		margin: 0 0 0.8em 0 !important;
+	}
+	
+	.wrapper.style3 .features li p,
+	.wrapper.style3 ul.features li p {
+		font-size: 0.85em !important;
+		margin: 0 0 1.2em 0 !important;
+	}
+	
+	.wrapper.style3 header.major {
+		margin: 0 0 2em 0 !important;
+	}
+	
+	.wrapper.style3 header.major h2 {
+		font-size: 1.6em !important;
+	}
+}
+
+/* 모바일 (736px 이하) - 1열 레이아웃 */
+@media screen and (max-width: 736px) {
+	.wrapper.style3 {
+		padding: 2.5em 1em 1.5em 1em !important;
+	}
+	
+	/* 1열로 변경 */
+	.wrapper.style3 .features li,
+	.wrapper.style3 ul.features li {
+		width: 100% !important;
+		min-height: auto !important;
+		padding: 1.5em 1em !important;
+		margin-bottom: 0 !important;
+		border-left: none !important;
+		border-right: none !important;
+		border-bottom: none !important;
+		border-top: solid 2px var(--border-color) !important;
+		background-color: var(--dark-card) !important;
+	}
+	
+	/* 첫 번째 카드는 위 테두리 없음 */
+	.wrapper.style3 .features li:first-child {
+		border-top: 0 !important;
+	}
+	
+	.wrapper.style3 .features li:after,
+	.wrapper.style3 ul.features li:after {
+		font-size: 1.6em !important;
+		margin: 0 0 0.8em 0 !important;
+	}
+	
+	.wrapper.style3 .features li h3,
+	.wrapper.style3 ul.features li h3 {
+		font-size: 0.95em !important;
+		margin: 0 0 0.8em 0 !important;
+	}
+	
+	.wrapper.style3 .features li p,
+	.wrapper.style3 ul.features li p {
+		font-size: 0.8em !important;
+		margin: 0 0 1em 0 !important;
+	}
+	
+	.wrapper.style3 .features li .button.small,
+	.wrapper.style3 ul.features li .button.small,
+	.wrapper.style3 .features li .button,
+	.wrapper.style3 ul.features li .button {
+		padding: 0.5em 1.5em !important;
+		font-size: 0.75em !important;
+		min-width: 100px !important;
+	}
+	
+	.wrapper.style3 header.major {
+		margin: 0 0 1.5em 0 !important;
+	}
+	
+	.wrapper.style3 header.major h2 {
+		font-size: 1.4em !important;
+	}
+	
+	.wrapper.style3 header.major p {
+		font-size: 0.9em !important;
+	}
+}
+
+/* 작은 모바일 (480px 이하) */
+@media screen and (max-width: 480px) {
+	.wrapper.style3 {
+		padding: 2em 0.5em 1em 0.5em !important;
+	}
+	
+	.wrapper.style3 .features li,
+	.wrapper.style3 ul.features li {
+		padding: 1.2em 0.8em !important;
+	}
+	
+	.wrapper.style3 .features li:after,
+	.wrapper.style3 ul.features li:after {
+		font-size: 1.4em !important;
+	}
+	
+	.wrapper.style3 .features li h3,
+	.wrapper.style3 ul.features li h3 {
+		font-size: 0.9em !important;
+	}
+	
+	.wrapper.style3 .features li p,
+	.wrapper.style3 ul.features li p {
+		font-size: 0.75em !important;
+	}
+	
+	.wrapper.style3 header.major h2 {
+		font-size: 1.2em !important;
+	}
+}
+
+/* 레이아웃 안정성을 위한 추가 규칙 */
+.wrapper.style3 .features li * {
+	box-sizing: border-box !important;
+}
+
+/* flexbox 폴백 */
+.wrapper.style3 .features {
+	overflow: hidden !important;
+}
+
+/* 카드 간 일관된 높이 유지 (데스크톱) */
+@media screen and (min-width: 737px) {
+	.wrapper.style3 .features li,
+	.wrapper.style3 ul.features li {
+		display: flex !important;
+		flex-direction: column !important;
+	}
+}
+
+/* 태블릿에서 크기 조정 */
+@media screen and (max-width: 980px) {
+	.wrapper.style3 {
+		padding: 3em 0 2em 0 !important;
+	}
+	
+	.wrapper.style3 .features li,
+	.wrapper.style3 ul.features li {
+		width: 50% !important;
+		padding: 2em 1.5em 3.5em 1.5em !important;
+		min-height: 300px !important; /* 태블릿에서 더 축소 */
+	}
+	
+	.wrapper.style3 .features li:after,
+	.wrapper.style3 ul.features li:after {
+		font-size: 2em !important;
+	}
+	
+	.wrapper.style3 header.major {
+		margin: 0 0 2em 0 !important;
+	}
+}
+
+/* 모바일에서 크기 조정 */
+@media screen and (max-width: 736px) {
+	.wrapper.style3 {
+		padding: 2.5em 0 1.5em 0 !important;
+	}
+	
+	.wrapper.style3 .features li,
+	.wrapper.style3 ul.features li {
+		width: 100% !important;
+		padding: 1.5em 1.5em 1.5em 1.5em !important;
+		min-height: auto !important;
+	}
+	
+	.wrapper.style3 .features li ul.actions {
+		position: static !important;
+		margin-top: 1em !important;
+		bottom: auto !important;
+	}
+	
+	.wrapper.style3 .features li:after,
+	.wrapper.style3 ul.features li:after {
+		font-size: 1.8em !important;
+		margin: 0 0 0.8em 0 !important;
+	}
+	
+	.wrapper.style3 .features li h3,
+	.wrapper.style3 ul.features li h3 {
+		font-size: 1em !important;
+		margin: 0 0 0.8em 0 !important;
+	}
+	
+	.wrapper.style3 .features li p,
+	.wrapper.style3 ul.features li p {
+		font-size: 0.85em !important;
+		margin: 0 0 1em 0 !important;
+	}
+	
+	.wrapper.style3 header.major {
+		margin: 0 0 1.5em 0 !important;
+	}
+	
+	.wrapper.style3 header.major h2 {
+		font-size: 1.4em !important;
+	}
+}
+
+/* 매우 작은 화면에서 추가 조정 */
+@media screen and (max-width: 480px) {
+	.wrapper.style3 {
+		padding: 2em 0 1em 0 !important;
+	}
+	
+	.wrapper.style3 .features li,
+	.wrapper.style3 ul.features li {
+		padding: 1.2em 1em 1.2em 1em !important;
+	}
+	
+	.wrapper.style3 .features li .button.small,
+	.wrapper.style3 ul.features li .button.small,
+	.wrapper.style3 .features li .button,
+	.wrapper.style3 ul.features li .button {
+		padding: 0.5em 1.5em !important;
+		font-size: 0.75em !important;
+		min-width: 100px !important;
+	}
+}
+
+/* 컴팩트한 느낌을 위한 추가 조정 */
+.wrapper.style3 .inner {
+	max-width: 55em !important; /* 기존보다 약간 좁게 */
+}
+
+/* 카드 간격 조정 */
+.wrapper.style3 .features li {
+	margin-bottom: 0 !important;
+}
+
+/* 전체적으로 더 타이트한 레이아웃 */
+.wrapper.style3 .features li:hover {
+	transform: translateY(-4px) !important; /* 기존 -8px에서 줄임 */
+}
+/* 검색 및 필터링 스타일 */
+.gallery-search {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: var(--dark-card);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.search-input-group {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.search-input-group input {
+    width: 100%;
+    padding: 0.75rem 3rem 0.75rem 1rem;
+    background: var(--dark-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-primary);
+}
+
+.search-input-group i {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-secondary);
+}
+
+.search-filters {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.5rem 1rem;
+    background: transparent;
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--primary-red);
+    color: white;
+    border-color: var(--primary-red);
+}
+
+/* 라이트박스 스타일 */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 10000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-overlay.active {
+    display: flex;
+}
+
+.lightbox-container {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+    background: var(--dark-card);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    z-index: 10001;
+}
+
+.lightbox-close {
+    top: 1rem;
+    right: 1rem;
+}
+
+.lightbox-prev {
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.lightbox-next {
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* 업로드 관련 스타일 */
+.teacher-info {
+    background: rgba(34, 197, 94, 0.1);
+    color: #22c55e;
+    padding: 0.75rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.upload-progress {
+    margin: 1rem 0;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: var(--dark-surface);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--gradient-primary);
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+.progress-text {
+    display: block;
+    text-align: center;
+    margin-top: 0.5rem;
+    color: var(--text-secondary);
+}
+/* ========== 통일된 버튼 스타일 (index.html과 동일) ========== */
+
+/* 모든 버튼 기본 스타일 통일 */
+.button {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	-ms-appearance: none;
+	appearance: none;
+	-moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+	-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+	-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+	transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+	background-color: transparent;
+	border-radius: 3px;
+	border: 0;
+	box-shadow: inset 0 0 0 2px var(--primary-blue);
+	color: var(--primary-blue);
+	cursor: pointer;
+	display: inline-block;
+	font-size: 0.8em;
+	font-weight: 600;
+	height: 3.125em;
+	letter-spacing: 0.225em;
+	line-height: 3.125em;
+	max-width: 30em;
+	padding: 0 2.75em;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.button:hover {
+	background-color: rgba(30, 64, 175, 0.05);
+}
+
+.button:active {
+	background-color: rgba(30, 64, 175, 0.15);
+}
+
+/* Primary 버튼 (index.html과 동일) */
+.button.primary {
+	background-color: var(--primary-blue);
+	box-shadow: none;
+	color: white !important;
+}
+
+.button.primary:hover {
+	background-color: #1d4ed8;
+	box-shadow: none;
+}
+
+.button.primary:active {
+	background-color: #1e3a8a;
+}
+
+/* Small 버튼 */
+.button.small {
+	font-size: 0.7em;
+	height: 2.75em;
+	line-height: 2.75em;
+	padding: 0 2em;
+}
+
+/* Fit 버튼 */
+.button.fit {
+	width: 100%;
+}
+
+/* 서브 네비게이션 버튼 특별 스타일 */
+.sub-nav .actions.fit .button {
+	background: transparent !important;
+	color: var(--text-secondary) !important;
+	border: 2px solid var(--border-color) !important;
+	font-weight: 500;
+	transition: all 0.3s ease;
+	font-size: 0.8em !important;
+	padding: 0 1.5em !important;
+	text-align: center !important;
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	height: 2.5em !important;
+	line-height: 1 !important;
+	white-space: nowrap !important;
+}
+
+.sub-nav .actions.fit .button:hover {
+	background: var(--primary-red) !important;
+	color: white !important;
+	border-color: var(--primary-red) !important;
+	transform: translateY(-2px);
+	box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3) !important;
+}
+
+/* 갤러리 탭 버튼 */
+.gallery-tabs .actions .button {
+	background: var(--gradient-primary) !important;
+	color: white !important;
+	border: none !important;
+	box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3) !important;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	transition: all 0.3s ease;
+}
+
+.gallery-tabs .actions .button:hover,
+.gallery-tabs .actions .button.active {
+	background: var(--gradient-accent) !important;
+	transform: translateY(-2px);
+	box-shadow: 0 8px 25px rgba(220, 38, 38, 0.4) !important;
+}
+
+/* 업로드 폼 버튼 */
+.upload-section .button.primary {
+	background: var(--gradient-primary) !important;
+	color: white !important;
+	border: none !important;
+	box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3) !important;
+	padding: 0.8em 2.5em !important;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	transition: all 0.3s ease;
+}
+
+.upload-section .button.primary:hover {
+	background: var(--gradient-accent) !important;
+	transform: translateY(-2px);
+	box-shadow: 0 8px 25px rgba(220, 38, 38, 0.4) !important;
+}
+
+/* CTA 섹션 버튼 (index.html과 정확히 동일) */
+.wrapper.style4 .actions .button {
+	background-color: transparent;
+	box-shadow: inset 0 0 0 2px white;
+	color: white;
+	font-size: 0.8em;
+	font-weight: 600;
+	height: 3.125em;
+	letter-spacing: 0.225em;
+	line-height: 3.125em;
+	padding: 0 2.75em;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	white-space: nowrap;
+	border-radius: 3px;
+	display: inline-block;
+	transition: all 0.2s ease-in-out;
+}
+
+.wrapper.style4 .actions .button:hover {
+	background-color: white;
+	color: var(--primary-red);
+}
+
+.wrapper.style4 .actions .button.primary {
+	background-color: white;
+	color: var(--primary-red);
+	box-shadow: none;
+}
+
+.wrapper.style4 .actions .button.primary:hover {
+	background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Actions 리스트 스타일 통일 */
+.actions {
+	display: flex;
+	cursor: default;
+	list-style: none;
+	margin-left: -1em;
+	padding-left: 0;
+}
+
+.actions li {
+	padding: 0 0 0 1em;
+	vertical-align: middle;
+}
+
+.actions.special {
+	justify-content: center;
+	width: 100%;
+	margin-left: 0;
+}
+
+.actions.special li {
+	flex: 1;
+	margin-left: 1em;
+	margin-right: 0;
+	max-width: 20em;
+	padding: 0;
+}
+
+.actions.special li:first-child {
+	margin-left: 0;
+}
+
+.actions.fit {
+	width: calc(100% + 1em);
+}
+
+.actions.fit li {
+	flex: 1;
+	margin-left: 1em;
+	margin-right: 0;
+	padding: 0;
+}
+
+.actions.fit li:first-child {
+	margin-left: 0;
+}
+
+.actions.stacked {
+	flex-direction: column;
+	margin-left: 0;
+}
+
+.actions.stacked li {
+	flex: 1;
+	margin-left: 0;
+	padding: 0.5em 0 0 0;
+}
+
+.actions.stacked li:first-child {
+	padding-top: 0;
+}
+
+/* 검색 필터 버튼 */
+.filter-btn {
+	padding: 0.5rem 1rem;
+	background: transparent;
+	color: var(--text-secondary);
+	border: 1px solid var(--border-color);
+	border-radius: 4px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	font-family: inherit;
+	font-size: 0.8em;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+	background: var(--primary-red);
+	color: white;
+	border-color: var(--primary-red);
+	transform: translateY(-1px);
+}
+
+/* 반응형 */
+@media screen and (max-width: 980px) {
+	.actions.special {
+		flex-direction: column;
+	}
+	
+	.actions.special li {
+		margin: 0.5em 0;
+		max-width: none;
+	}
+	
+	.sub-nav .actions.fit {
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+	
+	.sub-nav .actions.fit .button {
+		margin-bottom: 0.5rem;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 736px) {
+	.button {
+		height: 2.75em;
+		line-height: 2.75em;
+		font-size: 0.7em;
+		padding: 0 2em;
+	}
+	
+	.actions {
+		margin: 0 0 2em 0;
+	}
+	
+	.actions li {
+		display: block;
+		padding: 1em 0 0 0;
+		text-align: center;
+		width: 100%;
+	}
+	
+	.actions li:first-child {
+		padding-top: 0;
+	}
+	
+	.actions.special {
+		margin-left: 0;
+	}
+}
+/* ========== 버튼 가운데 정렬 수정 ========== */
+
+/* 모든 actions 컨테이너 가운데 정렬 */
+.actions {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	list-style: none;
+	margin: 0 auto;
+	padding: 0;
+	width: 100%;
+}
+
+.actions li {
+	margin: 0 0.5rem;
+	padding: 0;
+	vertical-align: middle;
+}
+
+/* Special actions (갤러리 탭 등) */
+.actions.special {
+	justify-content: center;
+	width: 100%;
+	margin: 0 auto 2rem auto;
+}
+
+.actions.special li {
+	flex: 0 0 auto;
+	margin: 0 0.5rem;
+	max-width: none;
+	padding: 0;
+}
+
+/* Fit actions (서브 네비게이션) */
+.actions.fit {
+	justify-content: center;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.actions.fit li {
+	flex: 1;
+	margin: 0 0.25rem;
+	padding: 0;
+	max-width: 200px;
+}
+
+.actions.fit li:first-child {
+	margin-left: 0;
+}
+
+.actions.fit li:last-child {
+	margin-right: 0;
+}
+
+/* Stacked actions (CTA 섹션) */
+.actions.stacked {
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+}
+
+.actions.stacked li {
+	margin: 0.5rem 0;
+	padding: 0;
+	width: auto;
+	max-width: 300px;
+}
+
+/* 서브 네비게이션 특별 정렬 */
+.sub-nav {
+	text-align: center;
+	width: 100%;
+}
+
+.sub-nav .actions {
+	justify-content: center;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+/* 갤러리 탭 정렬 */
+.gallery-tabs {
+	text-align: center;
+	margin-bottom: 3rem;
+}
+
+.gallery-tabs .actions {
+	justify-content: center;
+	max-width: 400px;
+	margin: 0 auto;
+}
+
+/* 업로드 섹션 버튼 정렬 */
+.upload-section .actions {
+	justify-content: center;
+	margin: 2rem auto 0;
+}
+
+/* CTA 섹션 버튼 정렬 */
+.wrapper.style4 .actions {
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+}
+
+/* 더보기 버튼 정렬 */
+.gallery-load-more {
+	text-align: center;
+	margin: 2rem auto;
+	width: 100%;
+}
+
+/* 구독 버튼들 정렬 */
+.subscribe-buttons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	flex-wrap: wrap;
+	margin: 1.5rem auto 0;
+}
+
+/* 개별 버튼 스타일 조정 */
+.button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	margin: 0;
+}
+
+/* 반응형 버튼 정렬 */
+@media screen and (max-width: 980px) {
+	.actions.special {
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.actions.special li {
+		margin: 0.5rem 0;
+		width: 100%;
+		max-width: 250px;
+	}
+	
+	.actions.fit {
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.actions.fit li {
+		margin: 0.25rem 0;
+		width: 100%;
+		max-width: 300px;
+	}
+	
+	.gallery-tabs .actions {
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+	
+	.gallery-tabs .actions li {
+		width: 100%;
+		max-width: 200px;
+	}
+	
+	.subscribe-buttons {
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+@media screen and (max-width: 736px) {
+	.actions {
+		margin: 0 auto 2em auto;
+		justify-content: center;
+	}
+	
+	.actions li {
+		display: block;
+		padding: 0.5em 0;
+		text-align: center;
+		width: 100%;
+		max-width: 280px;
+		margin: 0 auto;
+	}
+	
+	.actions li:first-child {
+		padding-top: 0;
+	}
+	
+	.actions.special {
+		margin: 0 auto 2em auto;
+	}
+	
+	.actions.fit li,
+	.actions.special li {
+		width: 100%;
+		max-width: 250px;
+		margin: 0.5rem auto;
+	}
+	
+	.sub-nav .actions li {
+		margin: 0.25rem auto;
+	}
+}
+
+/* 헤더 섹션 내 버튼들 */
+.content-header .actions {
+	justify-content: flex-end;
+	margin: 0;
+}
+
+/* 메이저 헤더 내 버튼들 */
+header.major + .actions,
+.major + .actions {
+	justify-content: center;
+	margin: 2rem auto;
+}
+
+/* 특정 섹션별 정렬 보정 */
+#banner .actions {
+	justify-content: center;
+	margin: 0 auto;
+}
+
+#gallery .actions {
+	justify-content: center;
+	margin: 0 auto 3rem auto;
+}
+
+#schedule .actions {
+	justify-content: center;
+	margin: 2rem auto;
+}
+
+/* 인라인 버튼들 */
+.actions.inline {
+	display: inline-flex;
+	width: auto;
+	margin: 0;
+}
+
+.actions.inline li {
+	margin: 0 0.25rem;
+}
+
+/* 왼쪽/오른쪽 정렬이 필요한 경우 */
+.actions.left {
+	justify-content: flex-start;
+}
+
+.actions.right {
+	justify-content: flex-end;
+}
+
+/* 버튼 그룹 간격 조정 */
+.button-group {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	margin: 1rem auto;
+	flex-wrap: wrap;
+}
+
+.button-group .button {
+	margin: 0;
+}
+
+/* 테이블 내 버튼 정렬 */
+table .actions {
+	justify-content: center;
+	margin: 0;
+	min-width: auto;
+}
+
+table .actions li {
+	margin: 0 0.25rem;
+}
+
+/* 폼 내 버튼 정렬 */
+form .actions {
+	justify-content: center;
+	margin: 2rem auto 0;
+}
+
+/* 카드 내 버튼 정렬 */
+.card .actions,
+.schedule-card .actions,
+.stat-card .actions {
+	justify-content: center;
+	margin: 1rem auto 0;
+}
+
+/* 푸터 내 버튼/아이콘 정렬 */
+#footer .icons {
+	justify-content: center;
+	margin: 0 auto 2rem auto;
+}
+
+#footer .copyright {
+	text-align: center;
+	margin: 0 auto;
+}
+
+/* 절대적 가운데 정렬이 필요한 경우 */
+.center-absolute {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+/* 플렉스 가운데 정렬 헬퍼 클래스 */
+.flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-center-column {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+/* ========== 모바일 버튼 정렬 완전 수정 ========== */
+
+/* 기본 버튼 정렬 - 모든 화면 크기 */
+.actions {
+	display: flex !important;
+	justify-content: center !important;
+	align-items: center !important;
+	list-style: none !important;
+	margin: 0 auto !important;
+	padding: 0 !important;
+	width: 100% !important;
+	text-align: center !important;
+}
+
+.actions li {
+	display: flex !important;
+	justify-content: center !important;
+	align-items: center !important;
+	text-align: center !important;
+}
+
+/* 모바일 전용 스타일 (480px 이하) */
+@media screen and (max-width: 480px) {
+	/* 모든 actions 세로 정렬 */
+	.actions {
+		flex-direction: column !important;
+		align-items: center !important;
+		justify-content: center !important;
+		width: 100% !important;
+		margin: 0 auto 2rem auto !important;
+		padding: 0 1rem !important;
+	}
+	
+	.actions li {
+		display: block !important;
+		width: 100% !important;
+		max-width: 280px !important;
+		margin: 0.5rem auto !important;
+		padding: 0 !important;
+		text-align: center !important;
+	}
+	
+	/* 버튼 자체 스타일 */
+	.actions li .button {
+		width: 100% !important;
+		display: block !important;
+		text-align: center !important;
+		margin: 0 auto !important;
+		max-width: 280px !important;
+		box-sizing: border-box !important;
+	}
+	
+	/* 서브 네비게이션 */
+	.sub-nav .actions {
+		flex-direction: column !important;
+		padding: 0 1rem !important;
+	}
+	
+	.sub-nav .actions li {
+		width: 100% !important;
+		max-width: 250px !important;
+		margin: 0.25rem auto !important;
+	}
+	
+	.sub-nav .actions li .button {
+		width: 100% !important;
+		text-align: center !important;
+	}
+	
+	/* 갤러리 탭 */
+	.gallery-tabs .actions {
+		flex-direction: column !important;
+		padding: 0 1rem !important;
+	}
+	
+	.gallery-tabs .actions li {
+		width: 100% !important;
+		max-width: 200px !important;
+		margin: 0.5rem auto !important;
+	}
+	
+	.gallery-tabs .actions li .button {
+		width: 100% !important;
+		text-align: center !important;
+	}
+	
+	/* CTA 섹션 버튼 */
+	.wrapper.style4 .actions {
+		flex-direction: column !important;
+		align-items: center !important;
+		padding: 0 1rem !important;
+	}
+	
+	.wrapper.style4 .actions li {
+		width: 100% !important;
+		max-width: 250px !important;
+		margin: 0.5rem auto !important;
+	}
+	
+	.wrapper.style4 .actions li .button {
+		width: 100% !important;
+		text-align: center !important;
+	}
+	
+	/* 업로드 섹션 버튼 */
+	.upload-section .actions {
+		flex-direction: column !important;
+		padding: 0 1rem !important;
+	}
+	
+	.upload-section .actions li {
+		width: 100% !important;
+		max-width: 200px !important;
+		margin: 0.5rem auto !important;
+	}
+	
+	.upload-section .actions li .button {
+		width: 100% !important;
+		text-align: center !important;
+	}
+	
+	/* 더보기 버튼 */
+	.gallery-load-more {
+		text-align: center !important;
+		padding: 0 1rem !important;
+	}
+	
+	.gallery-load-more .button {
+		width: 100% !important;
+		max-width: 200px !important;
+		margin: 0 auto !important;
+		text-align: center !important;
+	}
+	
+	/* Special actions 강제 정렬 */
+	.actions.special {
+		flex-direction: column !important;
+		align-items: center !important;
+		justify-content: center !important;
+		text-align: center !important;
+	}
+	
+	.actions.special li {
+		width: 100% !important;
+		max-width: 250px !important;
+		text-align: center !important;
+		margin: 0.5rem auto !important;
+	}
+	
+	/* Fit actions 강제 정렬 */
+	.actions.fit {
+		flex-direction: column !important;
+		align-items: center !important;
+		justify-content: center !important;
+	}
+	
+	.actions.fit li {
+		width: 100% !important;
+		max-width: 280px !important;
+		text-align: center !important;
+		margin: 0.25rem auto !important;
+	}
+	
+	/* Stacked actions */
+	.actions.stacked {
+		flex-direction: column !important;
+		align-items: center !important;
+	}
+	
+	.actions.stacked li {
+		width: 100% !important;
+		max-width: 250px !important;
+		margin: 0.5rem auto !important;
+	}
+}
+
+/* 태블릿 크기 (481px - 736px) */
+@media screen and (min-width: 481px) and (max-width: 736px) {
+	.actions {
+		flex-direction: column !important;
+		align-items: center !important;
+		justify-content: center !important;
+		padding: 0 2rem !important;
+	}
+	
+	.actions li {
+		width: 100% !important;
+		max-width: 350px !important;
+		margin: 0.5rem auto !important;
+		text-align: center !important;
+	}
+	
+	.actions li .button {
+		width: 100% !important;
+		text-align: center !important;
+	}
+	
+	/* 갤러리 탭은 가로로 유지 */
+	.gallery-tabs .actions {
+		flex-direction: row !important;
+		justify-content: center !important;
+		gap: 1rem !important;
+	}
+	
+	.gallery-tabs .actions li {
+		flex: 1 !important;
+		max-width: 150px !important;
+	}
+}
+
+/* 중간 크기 (737px - 980px) */
+@media screen and (min-width: 737px) and (max-width: 980px) {
+	.actions {
+		justify-content: center !important;
+		align-items: center !important;
+		flex-wrap: wrap !important;
+		gap: 1rem !important;
+	}
+	
+	.actions.special,
+	.actions.fit {
+		flex-direction: row !important;
+		justify-content: center !important;
+	}
+	
+	.actions.special li,
+	.actions.fit li {
+		flex: 0 0 auto !important;
+		margin: 0.5rem !important;
+		max-width: 200px !important;
+	}
+}
+
+/* 기존 스타일 오버라이드 방지 */
+.actions.special li:first-child,
+.actions.fit li:first-child {
+	margin-left: auto !important;
+}
+
+.actions.special li:last-child,
+.actions.fit li:last-child {
+	margin-right: auto !important;
+}
+
+/* 매우 작은 화면 (360px 이하) */
+@media screen and (max-width: 360px) {
+	.actions {
+		padding: 0 0.5rem !important;
+	}
+	
+	.actions li {
+		max-width: 240px !important;
+	}
+	
+	.actions li .button {
+		font-size: 0.7rem !important;
+		padding: 0 1.5rem !important;
+		height: 2.5rem !important;
+		line-height: 2.5rem !important;
+	}
+}
+
+/* 디버깅용 - 필요시 주석 해제 */
+/*
+.actions {
+	border: 2px solid red !important;
+}
+.actions li {
+	border: 1px solid blue !important;
+}
+.actions li .button {
+	border: 1px solid green !important;
+}
+*/

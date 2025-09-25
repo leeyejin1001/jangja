@@ -1,0 +1,507 @@
+/* ========== 장자기독학교 학교소개 페이지 라이트 모드 애니메이션 ========== */
+
+/* 기본 spotlight 설정 - 최고 우선순위 */
+.spotlight {
+    display: flex !important;
+    align-items: center !important;
+    min-height: 400px !important;
+    padding: 4rem 0 !important;
+    overflow: hidden !important;
+    position: relative !important;
+    margin-bottom: 2rem !important;
+}
+
+.spotlight .image {
+    width: 50% !important;
+    padding: 0 2rem !important;
+    display: block !important;
+    position: relative !important;
+}
+
+.spotlight .content {
+    width: 50% !important;
+    padding: 0 2rem !important;
+}
+
+.spotlight .image img {
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 12px !important;
+    display: block !important;
+    transition: transform 0.6s ease, filter 0.6s ease, box-shadow 0.6s ease !important;
+    filter: brightness(1) contrast(1.1) !important;
+    opacity: 1 !important; /* 기본적으로 표시 */
+}
+
+/* 순서별 좌우 교차 - 강제 적용 */
+/* 1. 장자학교란 - 왼쪽 */
+#jangjahak .spotlight {
+    flex-direction: row !important;
+}
+
+/* 2. 비전 - 오른쪽 */
+#vision .spotlight {
+    flex-direction: row-reverse !important;
+}
+
+/* 3. 이사장 - 왼쪽 */
+#chairman .spotlight {
+    flex-direction: row !important;
+}
+
+/* 4. 학교장 - 오른쪽 */
+#principal .spotlight {
+    flex-direction: row-reverse !important;
+}
+
+/* 5. 담당장로 - 왼쪽 */
+#elder .spotlight {
+    flex-direction: row !important;
+}
+
+/* 6. 학교상징 - 오른쪽 */
+#education-philosophy .spotlight {
+    flex-direction: row-reverse !important;
+}
+
+/* 7. 연혁 - 왼쪽 */
+#milestone .spotlight {
+    flex-direction: row !important;
+}
+
+/* 8. 교직원 - 오른쪽 */
+#staff .spotlight {
+    flex-direction: row-reverse !important;
+}
+
+/* 애니메이션을 위한 초기 숨김 상태 */
+.spotlight:not(.animate) .image {
+    opacity: 0 !important;
+}
+
+/* 왼쪽에서 오는 이미지들 */
+#jangjahak .spotlight:not(.animate) .image,
+#chairman .spotlight:not(.animate) .image,
+#elder .spotlight:not(.animate) .image,
+#milestone .spotlight:not(.animate) .image {
+    transform: translateX(-100px) !important;
+}
+
+/* 오른쪽에서 오는 이미지들 */
+#vision .spotlight:not(.animate) .image,
+#principal .spotlight:not(.animate) .image,
+#education-philosophy .spotlight:not(.animate) .image,
+#staff .spotlight:not(.animate) .image {
+    transform: translateX(100px) !important;
+}
+
+/* 텍스트 콘텐츠 애니메이션 */
+.spotlight .content {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s !important;
+}
+
+.spotlight:not(.animate) .content {
+    opacity: 0 !important;
+    transform: translateY(50px) !important;
+}
+
+.spotlight.animate .content {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.spotlight.animate .image {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+}
+
+/* 각 섹션별 개별 딜레이 적용 */
+#jangjahak.animate .spotlight .image { transition-delay: 0.1s !important; }
+#jangjahak.animate .spotlight .content { transition-delay: 0.5s !important; }
+
+#vision.animate .spotlight .image { transition-delay: 0.2s !important; }
+#vision.animate .spotlight .content { transition-delay: 0.6s !important; }
+
+#chairman.animate .spotlight .image { transition-delay: 0.3s !important; }
+#chairman.animate .spotlight .content { transition-delay: 0.7s !important; }
+
+#principal.animate .spotlight .image { transition-delay: 0.4s !important; }
+#principal.animate .spotlight .content { transition-delay: 0.8s !important; }
+
+#elder.animate .spotlight .image { transition-delay: 0.5s !important; }
+#elder.animate .spotlight .content { transition-delay: 0.9s !important; }
+
+#education-philosophy.animate .spotlight .image { transition-delay: 0.6s !important; }
+#education-philosophy.animate .spotlight .content { transition-delay: 1.0s !important; }
+
+#milestone.animate .spotlight .image { transition-delay: 0.7s !important; }
+#milestone.animate .spotlight .content { transition-delay: 1.1s !important; }
+
+#staff.animate .spotlight .image { transition-delay: 0.8s !important; }
+#staff.animate .spotlight .content { transition-delay: 1.2s !important; }
+
+/* 이미지 호버 효과 */
+.spotlight:hover .image img {
+    transform: scale(1.08) !important;
+    filter: brightness(1.1) contrast(1.2) !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* 그라디언트 오버레이 효과 */
+.spotlight .image::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: linear-gradient(135deg, rgba(220, 38, 38, 0.08) 0%, rgba(30, 64, 175, 0.08) 100%) !important;
+    opacity: 0 !important;
+    transition: opacity 0.6s ease !important;
+    pointer-events: none !important;
+    border-radius: 12px !important;
+}
+
+.spotlight:hover .image::before {
+    opacity: 1 !important;
+}
+
+/* 섹션별 배경색 차별화 - 라이트 모드 */
+#jangjahak,
+#chairman,
+#elder,
+#milestone {
+    background: rgba(220, 38, 38, 0.01) !important;
+}
+
+#vision,
+#principal,
+#education-philosophy,
+#staff {
+    background: rgba(30, 64, 175, 0.01) !important;
+}
+
+/* 라이트 모드 텍스트 색상 */
+.spotlight .content h2 {
+    color: var(--text-primary) !important;
+    font-weight: 700 !important;
+    text-shadow: none !important;
+    font-size: 2.2em !important;
+    margin-bottom: 1em !important;
+}
+
+/* 그라디언트 소제목 */
+.spotlight .content h3,
+.vision-item h4,
+.staff-item h3 {
+    background: linear-gradient(135deg, #8B5CF6 0%, #DC2626 100%) !important;
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    font-weight: 600 !important;
+    color: transparent !important;
+    font-size: 1.5em !important;
+    margin-bottom: 0.8em !important;
+}
+
+/* 본문 텍스트 */
+.spotlight .content p {
+    color: var(--text-secondary) !important;
+    line-height: 1.7 !important;
+    font-size: 1.1em !important;
+    margin-bottom: 1.5em !important;
+}
+
+/* 콘텐츠 섹션 스타일 */
+.history-timeline {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+    margin-top: 1.5rem !important;
+}
+
+.history-item {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 1.5rem !important;
+    padding: 1.5rem !important;
+    background: rgba(248, 250, 252, 0.8) !important;
+    border-radius: 12px !important;
+    border-left: 4px solid var(--primary-blue) !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
+}
+
+.history-item:hover {
+    transform: translateX(5px) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
+}
+
+.history-year {
+    background: linear-gradient(135deg, #8B5CF6 0%, #DC2626 100%) !important;
+    color: white !important;
+    padding: 0.8rem 1.2rem !important;
+    border-radius: 12px !important;
+    font-weight: 600 !important;
+    font-size: 0.95rem !important;
+    min-width: 120px !important;
+    text-align: center !important;
+    flex-shrink: 0 !important;
+    -webkit-background-clip: initial !important;
+    -webkit-text-fill-color: initial !important;
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3) !important;
+}
+
+.history-desc {
+    color: var(--text-secondary) !important;
+    line-height: 1.6 !important;
+    flex-grow: 1 !important;
+    font-size: 1.05em !important;
+}
+
+.staff-sections {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+    margin-top: 2rem !important;
+}
+
+.staff-item {
+    padding: 1.8rem !important;
+    background: rgba(248, 250, 252, 0.8) !important;
+    border-radius: 12px !important;
+    border-left: 4px solid var(--primary-blue) !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
+}
+
+.staff-item:hover {
+    transform: translateX(5px) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
+}
+
+.staff-item p {
+    color: var(--text-secondary) !important;
+    line-height: 1.6 !important;
+    margin: 0.8em 0 0 0 !important;
+    font-size: 1.05em !important;
+}
+
+.vision-features {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+    margin-top: 2rem !important;
+}
+
+.vision-item {
+    padding: 1.8rem !important;
+    background: rgba(254, 242, 242, 0.8) !important;
+    border-radius: 12px !important;
+    border-left: 4px solid var(--primary-red) !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
+}
+
+.vision-item:hover {
+    background: rgba(254, 226, 226, 0.6) !important;
+    transform: translateX(5px) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
+}
+
+.vision-item p {
+    color: var(--text-secondary) !important;
+    line-height: 1.6 !important;
+    margin: 0.8em 0 0 0 !important;
+    font-size: 1.05em !important;
+}
+
+/* 메인 헤더 스타일 개선 */
+#main > header {
+    background: linear-gradient(135deg, rgba(220, 38, 38, 0.1) 0%, rgba(30, 64, 175, 0.1) 100%) !important;
+    padding: 8em 0 6em 0 !important;
+    text-align: center !important;
+    border-bottom: 1px solid var(--border-color) !important;
+}
+
+#main > header h2 {
+    color: var(--text-primary) !important;
+    font-size: 3em !important;
+    font-weight: 800 !important;
+    margin-bottom: 0.5em !important;
+    text-shadow: none !important;
+}
+
+#main > header p {
+    color: var(--text-secondary) !important;
+    font-size: 1.2em !important;
+    line-height: 1.6 !important;
+    max-width: 600px !important;
+    margin: 0 auto !important;
+}
+
+/* ========== 반응형 디자인 ========== */
+
+/* 태블릿 (980px 이하) */
+@media screen and (max-width: 980px) {
+    .spotlight {
+        flex-direction: column !important;
+        padding: 2rem 0 !important;
+    }
+    
+    .spotlight .image,
+    .spotlight .content {
+        width: 100% !important;
+        padding: 0 1rem !important;
+    }
+    
+    .spotlight .image {
+        margin-bottom: 2rem !important;
+    }
+    
+    .spotlight .content h2 {
+        font-size: 1.8em !important;
+    }
+    
+    .spotlight .content h3 {
+        font-size: 1.3em !important;
+    }
+    
+    .spotlight .content p {
+        font-size: 1em !important;
+    }
+    
+    #main > header {
+        padding: 6em 2em 4em 2em !important;
+    }
+    
+    #main > header h2 {
+        font-size: 2.2em !important;
+    }
+    
+    #main > header p {
+        font-size: 1.1em !important;
+    }
+}
+
+/* 모바일 (736px 이하) */
+@media screen and (max-width: 736px) {
+    .spotlight {
+        flex-direction: column !important;
+        padding: 2rem 0 !important;
+        margin-bottom: 3rem !important;
+    }
+    
+    .spotlight .image,
+    .spotlight .content {
+        width: 100% !important;
+        padding: 0 !important;
+    }
+    
+    .spotlight .image {
+        margin-bottom: 2rem !important;
+        border-radius: 0 !important;
+    }
+    
+    .spotlight .image img {
+        height: 250px !important;
+        object-fit: cover !important;
+        border-radius: 8px !important;
+    }
+    
+    .spotlight .content {
+        padding: 0 1rem !important;
+    }
+    
+    .spotlight .content h2 {
+        margin-top: 0 !important;
+        margin-bottom: 1rem !important;
+        font-size: 1.6rem !important;
+    }
+    
+    .spotlight .content h3 {
+        font-size: 1.2rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .spotlight .content p {
+        font-size: 0.95rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .spotlight:hover .image img {
+        transform: scale(1.02) !important;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    .history-timeline,
+    .staff-sections,
+    .vision-features {
+        gap: 1rem !important;
+    }
+
+    .history-item,
+    .staff-item,
+    .vision-item {
+        padding: 1.2rem !important;
+        border-left-width: 3px !important;
+    }
+
+    .history-item .history-year {
+        font-size: 0.85rem !important;
+        padding: 0.6rem 1rem !important;
+        min-width: 100px !important;
+    }
+
+    .history-item .history-desc,
+    .staff-item p,
+    .vision-item p {
+        font-size: 0.9rem !important;
+    }
+    
+    .staff-item h3,
+    .vision-item h4 {
+        font-size: 1.1rem !important;
+    }
+    
+    #main > header {
+        padding: 4em 1em 3em 1em !important;
+    }
+    
+    #main > header h2 {
+        font-size: 1.8em !important;
+    }
+    
+    #main > header p {
+        font-size: 1em !important;
+    }
+}
+
+/* 접근성: 모션 민감성 사용자 대응 */
+@media (prefers-reduced-motion: reduce) {
+    .spotlight .image,
+    .spotlight .content,
+    .spotlight .image img,
+    .history-item,
+    .staff-item,
+    .vision-item {
+        transition: none !important;
+        transform: none !important;
+        animation: none !important;
+    }
+    
+    .spotlight .image {
+        opacity: 1 !important;
+    }
+    
+    .spotlight .content {
+        opacity: 1 !important;
+    }
+
+    .spotlight .image::before {
+        display: none !important;
+    }
+}

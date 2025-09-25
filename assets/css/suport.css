@@ -1,0 +1,521 @@
+/* 장자기독학교 후원안내 페이지 전용 스타일 */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+	/* Juilliard 스타일 다크 테마 컬러 */
+	--primary-red: #dc2626;
+	--primary-blue: #1e40af;
+	--dark-bg: #0a0a0a;
+	--dark-surface: #1a1a1a;
+	--dark-card: #2a2a2a;
+	--text-primary: #ffffff;
+	--text-secondary: #a1a1aa;
+	--text-muted: #71717a;
+	--border-color: #404040;
+	
+	/* 그라데이션 */
+	--gradient-primary: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-blue) 100%);
+	--gradient-dark: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+	--gradient-accent: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-red) 100%);
+}
+
+/* ========== ACCESSIBILITY ========== */
+.skip-link {
+	position: absolute;
+	top: -40px;
+	left: 6px;
+	background: var(--primary-red);
+	color: white;
+	padding: 8px;
+	border-radius: 4px;
+	text-decoration: none;
+	z-index: 100000;
+	transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+	top: 6px;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+/* ========== BODY & BASIC OVERRIDES ========== */
+body {
+	background: var(--dark-bg) !important;
+	color: var(--text-primary) !important;
+	font-family: 'Noto Sans KR', 'Inter', sans-serif !important;
+}
+
+body, input, select, textarea {
+	color: var(--text-primary) !important;
+	font-weight: 400;
+}
+
+strong, b {
+	color: var(--text-primary) !important;
+	font-weight: 600;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: var(--text-primary) !important;
+	font-weight: 600;
+}
+
+/* ========== HEADER IMPROVEMENTS ========== */
+#header {
+	background: rgba(10, 10, 10, 0.95) !important;
+	backdrop-filter: blur(20px);
+	-webkit-backdrop-filter: blur(20px);
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+	border-bottom: 1px solid var(--border-color) !important;
+	transition: all 0.3s ease !important;
+}
+
+#header h1 a {
+	color: var(--text-primary) !important;
+	font-weight: 700;
+	text-decoration: none;
+	border: none;
+}
+
+#header nav > ul > li > a {
+	color: var(--text-secondary) !important;
+	font-weight: 500;
+	transition: all 0.3s ease;
+}
+
+#header nav > ul > li > a:hover {
+	color: var(--text-primary) !important;
+}
+
+/* ========== MENU IMPROVEMENTS ========== */
+#menu {
+	background: var(--dark-surface) !important;
+	border-left: 1px solid var(--border-color) !important;
+}
+
+#menu ul > li {
+	border-top: 1px solid var(--border-color) !important;
+}
+
+#menu ul > li > a {
+	color: var(--text-secondary) !important;
+	font-weight: 500;
+	transition: color 0.3s ease;
+}
+
+#menu ul > li > a:hover {
+	color: var(--primary-red) !important;
+}
+
+/* ========== MAIN HEADER ========== */
+#main > header {
+	background: var(--gradient-dark) !important;
+	position: relative;
+	overflow: hidden;
+}
+
+#main > header:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="%23dc2626" stop-opacity="0.1"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs><circle cx="200" cy="200" r="300" fill="url(%23a)"/><circle cx="800" cy="800" r="400" fill="url(%23a)"/></svg>');
+	opacity: 0.3;
+	pointer-events: none;
+}
+
+#main > header h2 {
+	color: var(--text-primary) !important;
+	font-size: 2.5em;
+	font-weight: 800;
+	background: var(--gradient-primary);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	position: relative;
+	z-index: 2;
+}
+
+#main > header p {
+	color: var(--text-secondary) !important;
+	font-size: 1.2em;
+	position: relative;
+	z-index: 2;
+}
+
+/* ========== SUB NAVIGATION ========== */
+.sub-nav {
+	background: var(--dark-surface) !important;
+	padding: 2em 0;
+	border-bottom: 1px solid var(--border-color);
+}
+
+.sub-nav .actions.fit .button {
+	background: transparent !important;
+	color: var(--text-secondary) !important;
+	border: 2px solid var(--border-color) !important;
+	font-weight: 500;
+	transition: all 0.3s ease;
+	font-size: 0.9em !important;
+	padding: 0.8em 2em !important;
+	border-radius: 8px !important;
+	text-transform: none !important;
+	letter-spacing: 0.5px !important;
+}
+
+.sub-nav .actions.fit .button:hover {
+	background: var(--primary-red) !important;
+	color: white !important;
+	border-color: var(--primary-red) !important;
+	transform: translateY(-2px);
+	box-shadow: 0 8px 25px rgba(220, 38, 38, 0.3) !important;
+}
+
+.sub-nav .actions.fit .button.active {
+	background: var(--gradient-primary) !important;
+	color: white !important;
+	border-color: var(--primary-red) !important;
+}
+
+/* ========== WRAPPER STYLES ========== */
+.wrapper.style1 {
+	background: var(--dark-surface) !important;
+	color: var(--text-primary) !important;
+}
+
+.wrapper.style3 {
+	background: var(--dark-surface) !important;
+	color: var(--text-primary) !important;
+}
+
+.wrapper.style4 {
+	background: var(--gradient-primary) !important;
+	color: white !important;
+	position: relative;
+}
+
+.wrapper.style4:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
+	pointer-events: none;
+}
+
+.wrapper.style4 .inner {
+	position: relative;
+	z-index: 2;
+}
+
+.wrapper.style4 h2 {
+	color: white !important;
+	font-size: 2.2em;
+	font-weight: 700;
+	text-shadow: none;
+}
+
+.wrapper.style4 p {
+	color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.wrapper.style5 {
+	background: var(--dark-bg) !important;
+	color: var(--text-primary) !important;
+}
+
+/* ========== CONTENT SECTIONS ========== */
+.content-section {
+	margin: 3rem 0;
+	padding: 3rem;
+	background: var(--dark-card) !important;
+	border: 1px solid var(--border-color) !important;
+	border-radius: 16px;
+	transition: all 0.3s ease;
+}
+
+.content-section:hover {
+	border-color: rgba(220, 38, 38, 0.3) !important;
+	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2) !important;
+}
+
+.content-section h3 {
+	color: var(--text-primary) !important;
+	margin-bottom: 2rem;
+	font-size: 1.8em;
+	font-weight: 700;
+	text-align: center;
+	background: var(--gradient-primary);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.content-section .placeholder {
+	background: rgba(220, 38, 38, 0.1) !important;
+	border: 2px dashed var(--primary-red) !important;
+	border-radius: 12px;
+	padding: 3rem;
+	text-align: center;
+	color: var(--text-secondary) !important;
+}
+
+.content-section .placeholder h4 {
+	color: var(--primary-red) !important;
+	font-size: 1.3em;
+	margin-bottom: 1rem;
+}
+
+/* ========== BUTTON STYLES ========== */
+.button.primary {
+	background: var(--gradient-primary) !important;
+	border: none !important;
+	color: white !important;
+	padding: 0 3em;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	transition: all 0.3s ease;
+	box-shadow: 0 8px 25px rgba(220, 38, 38, 0.3) !important;
+}
+
+.button.primary:hover {
+	transform: translateY(-3px) !important;
+	box-shadow: 0 12px 35px rgba(220, 38, 38, 0.4) !important;
+	background: var(--gradient-accent) !important;
+	color: white !important;
+}
+
+.button.primary:active {
+	transform: translateY(-1px) !important;
+	box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3) !important;
+}
+
+.button {
+	border: 2px solid var(--primary-blue) !important;
+	color: var(--primary-blue) !important;
+	background: transparent !important;
+	transition: all 0.3s ease;
+	font-weight: 500;
+}
+
+.button:focus {
+	outline: 2px solid var(--primary-blue) !important;
+	outline-offset: 2px !important;
+	border-color: var(--primary-blue) !important;
+}
+
+.button:focus:not(:focus-visible) {
+	outline: none !important;
+}
+
+.button.primary:focus {
+	outline: 2px solid rgba(220, 38, 38, 0.8) !important;
+	outline-offset: 2px !important;
+}
+
+.button:focus {
+	outline: 2px solid var(--primary-blue) !important;
+	outline-offset: 2px !important;
+}
+
+.button:focus:not(:focus-visible) {
+	outline: none !important;
+}
+
+/* ========== FOOTER IMPROVEMENTS ========== */
+#footer {
+	background: var(--dark-surface) !important;
+	border-top: 1px solid var(--border-color) !important;
+}
+
+#footer .icons a {
+	color: var(--text-secondary) !important;
+	transition: all 0.3s ease;
+	background: var(--dark-card) !important;
+	border: 1px solid var(--border-color) !important;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#footer .icons a:hover {
+	color: white !important;
+	background: var(--primary-red) !important;
+	border-color: var(--primary-red) !important;
+	transform: translateY(-2px);
+}
+
+#footer .copyright {
+	color: var(--text-muted) !important;
+}
+
+#footer .copyright a {
+	color: var(--text-secondary) !important;
+}
+
+#footer .copyright a:hover {
+	color: var(--primary-red) !important;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media screen and (max-width: 980px) {
+	.content-section {
+		padding: 2rem;
+	}
+	
+	#main > header h2 {
+		font-size: 2em;
+	}
+	
+	#main > header p {
+		font-size: 1.1em;
+	}
+	
+	.board-header {
+		flex-direction: column;
+		gap: 1rem;
+		align-items: flex-start;
+	}
+	
+	.board-table th,
+	.board-table td {
+		padding: 0.8rem 0.5rem;
+		font-size: 0.85em;
+	}
+}
+
+@media screen and (max-width: 736px) {
+	.content-section {
+		padding: 1.5rem;
+	}
+	
+	#main > header h2 {
+		font-size: 1.8em;
+	}
+	
+	#main > header p {
+		font-size: 1em;
+	}
+	
+	.board-table .col-author,
+	.board-table .col-views {
+		display: none;
+	}
+	
+	.board-table .col-number { width: 15%; }
+	.board-table .col-title { width: 60%; }
+	.board-table .col-date { width: 25%; }
+	
+	.modal-content {
+		width: 95%;
+		margin: 1rem;
+	}
+	
+	.modal-body {
+		padding: 1.5rem;
+	}
+	
+	.form-actions {
+		flex-direction: column;
+		align-items: center;
+		gap: 0.8rem;
+	}
+	
+	.form-actions .button {
+		width: 100%;
+		max-width: 200px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.content-section {
+		padding: 1rem;
+	}
+	
+	#main > header {
+		padding: 4em 2em 2em 2em;
+	}
+	
+	.board-table th,
+	.board-table td {
+		padding: 0.6rem 0.3rem;
+		font-size: 0.8em;
+	}
+	
+	.modal-header {
+		padding: 1rem 1.5rem;
+	}
+	
+	.modal-body {
+		padding: 1rem;
+	}
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.content-section {
+	animation: fadeInUp 0.6s ease-out;
+	animation-fill-mode: both;
+}
+
+.content-section:nth-child(1) { animation-delay: 0.1s; }
+.content-section:nth-child(2) { animation-delay: 0.2s; }
+
+/* ========== SCROLLBAR STYLING ========== */
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--dark-bg);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--border-color);
+	border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--primary-red);
+}
+
+/* ========== TEXT SELECTION ========== */
+::selection {
+	background: var(--primary-red);
+	color: white;
+}
+
+::-moz-selection {
+	background: var(--primary-red);
+	color: white;
+}

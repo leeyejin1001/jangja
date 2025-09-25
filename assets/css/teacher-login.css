@@ -1,0 +1,310 @@
+/* 교사 로그인 페이지 CSS */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+	--primary-red: #dc2626;
+	--primary-blue: #1e40af;
+	--dark-bg: #0a0a0a;
+	--dark-surface: #1a1a1a;
+	--dark-card: #2a2a2a;
+	--text-primary: #ffffff;
+	--text-secondary: #a1a1aa;
+	--text-muted: #71717a;
+	--border-color: #404040;
+	--gradient-primary: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-blue) 100%);
+	--gradient-dark: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: var(--gradient-dark);
+	color: var(--text-primary);
+	font-family: 'Noto Sans KR', 'Inter', sans-serif;
+	line-height: 1.6;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.login-container {
+	background: var(--dark-card);
+	border: 1px solid var(--border-color);
+	border-radius: 16px;
+	padding: 3rem;
+	width: 100%;
+	max-width: 450px;
+	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+	position: relative;
+	overflow: hidden;
+}
+
+.login-container::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 4px;
+	background: var(--gradient-primary);
+}
+
+.login-header {
+	text-align: center;
+	margin-bottom: 2.5rem;
+}
+
+.school-logo {
+	width: 80px;
+	height: 80px;
+	background: var(--gradient-primary);
+	border-radius: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto 1.5rem;
+	font-size: 2rem;
+	color: white;
+}
+
+.login-header h1 {
+	font-size: 1.8rem;
+	font-weight: 700;
+	margin-bottom: 0.5rem;
+	color: var(--text-primary);
+}
+
+.login-header p {
+	color: var(--text-secondary);
+	font-size: 1rem;
+}
+
+.login-form {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.form-group {
+	position: relative;
+}
+
+.form-group input {
+	width: 100%;
+	padding: 1rem 1rem 1rem 3rem;
+	background: var(--dark-surface);
+	border: 1px solid var(--border-color);
+	border-radius: 8px;
+	color: var(--text-primary);
+	font-size: 1rem;
+	transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+	outline: none;
+	border-color: var(--primary-red);
+	box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.form-group input::placeholder {
+	color: var(--text-muted);
+}
+
+.form-group .icon {
+	position: absolute;
+	left: 1rem;
+	top: 50%;
+	transform: translateY(-50%);
+	color: var(--text-muted);
+	font-size: 1.1rem;
+}
+
+.form-group input:focus + .icon {
+	color: var(--primary-red);
+}
+
+.login-options {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 1rem 0;
+}
+
+.remember-me {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	color: var(--text-secondary);
+	font-size: 0.9rem;
+}
+
+.remember-me input[type="checkbox"] {
+	width: 18px;
+	height: 18px;
+	accent-color: var(--primary-red);
+}
+
+.forgot-password {
+	color: var(--primary-blue);
+	text-decoration: none;
+	font-size: 0.9rem;
+	transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+	color: var(--primary-red);
+}
+
+.login-btn {
+	background: var(--gradient-primary);
+	color: white;
+	border: none;
+	padding: 1rem 2rem;
+	border-radius: 8px;
+	font-size: 1rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	position: relative;
+	overflow: hidden;
+}
+
+.login-btn:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 12px 35px rgba(220, 38, 38, 0.4);
+}
+
+.login-btn:active {
+	transform: translateY(0);
+}
+
+.login-btn:disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+	transform: none;
+	box-shadow: none;
+}
+
+.loading-spinner {
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 20px;
+	height: 20px;
+	border: 2px solid transparent;
+	border-top: 2px solid white;
+	border-radius: 50%;
+	animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+	0% { transform: translate(-50%, -50%) rotate(0deg); }
+	100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.error-message {
+	background: rgba(239, 68, 68, 0.1);
+	border: 1px solid #ef4444;
+	color: #ef4444;
+	padding: 1rem;
+	border-radius: 8px;
+	font-size: 0.9rem;
+	margin-top: 1rem;
+	display: none;
+	text-align: center;
+}
+
+.error-message.show {
+	display: block;
+	animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+	from {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.login-footer {
+	text-align: center;
+	margin-top: 2rem;
+	padding-top: 2rem;
+	border-top: 1px solid var(--border-color);
+}
+
+.login-footer a {
+	color: var(--text-secondary);
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+.login-footer a:hover {
+	color: var(--primary-red);
+}
+
+.back-to-home {
+	position: absolute;
+	top: 2rem;
+	left: 2rem;
+	color: var(--text-secondary);
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	transition: color 0.3s ease;
+}
+
+.back-to-home:hover {
+	color: var(--text-primary);
+}
+
+.theme-toggle {
+	position: absolute;
+	top: 2rem;
+	right: 2rem;
+	background: var(--dark-surface);
+	border: 1px solid var(--border-color);
+	color: var(--text-secondary);
+	padding: 0.5rem;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+	color: var(--primary-red);
+	border-color: var(--primary-red);
+}
+
+/* 반응형 */
+@media screen and (max-width: 768px) {
+	.login-container {
+		margin: 1rem;
+		padding: 2rem;
+	}
+	
+	.back-to-home {
+		top: 1rem;
+		left: 1rem;
+	}
+	
+	.theme-toggle {
+		top: 1rem;
+		right: 1rem;
+	}
+}
